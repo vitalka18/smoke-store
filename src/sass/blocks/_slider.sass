@@ -1,0 +1,215 @@
+.slick-dots button
+  background: $slider-dot-color
+  width: 15px
+  height: 15px
+  box-shadow: none
+  transition: background .3s
+
+.slick-dots li.slick-active button,
+.slick-dots button:hover
+  background: $slider-dot-color_active
+
+.brand-slider-container
+  margin: 30px 0
+  .container
+    padding: 22px 70px
+    border-top: 1px solid $dark-base
+    border-bottom: 1px solid $dark-base
+
+.brand-slider
+  margin-bottom: 10px
+  .slick-prev
+    margin-left: -50px
+  .slick-next
+    margin-right: -50px
+.brand-slider .brand-slider__slide
+  display: flex
+
+.brand-slider__slide
+  height: 45px
+  padding: 0 15px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: nowrap
+  align-items: center
+  img
+    margin: 0 auto
+    filter: grayscale(100%)
+    transition: all .3s
+  &:hover,
+  &:focus,
+  &.active
+    img
+      filter: grayscale(0%)
+.main-slider-container
+  padding: 0
+  background: url(../img/main-slider-mask-2.png) center top no-repeat
+
+.main-slider
+  background: url(../img/main-slider-mask-1.png) center bottom no-repeat
+  background-size: 100% auto
+  padding-bottom: 80px
+  .slick-dots
+    bottom: 35px
+
+.main-slider__slide
+  padding-top: 65px
+  text-align: center
+  position: relative
+  img
+    margin: 0 auto
+
+.main-slider__jumbotron
+  position: absolute
+  top: 5px
+  left: 30px
+  background: $slider-jumbotron-bg
+  padding: 20px 15px
+  color: $white
+  border-radius: 3px
+  text-align: center
+  z-index: 10
+  .jumbotron-img
+    margin-bottom: 20px
+  p
+    font-size: 16px
+    margin-bottom: 20px
+
+.slick-prev:before, .slick-next:before
+  display: none
+
+.slick-prev, .slick-next
+  overflow: hidden
+  width: 12px
+  height: 20px
+  text-indent: -9999px
+  color: rgba(0,0,0,0)
+  transition: opacity .3s transform .6s
+  &:hover
+    opacity: .7
+  &:focus
+    transform: scale(1.05)
+
+.slick-prev
+  background: url(../img/icons/prev.png) center no-repeat
+.slick-next
+  background: url(../img/icons/next.png) center no-repeat
+  
+
+.goods-slider-container
+  border-top: 1px solid $dark-base
+  border-bottom: 1px solid $dark-base
+  .slick-arrow
+    width: 36px
+    height: 36px
+    border: 2px solid #2e2e2e
+    border-radius: 50%
+  .slick-prev
+    margin-left: -18px
+  .slick-next
+    margin-right: -18px
+
+.goods-slider-container_popular
+  border: none
+  margin-bottom: 25px
+  .goods-slider
+    border-top: 1px solid $dark-base
+
+.goods-slider
+  position: relative
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    right: -1px
+    width: 2px
+    background: #fff
+
+.goods-slide
+  border-right: 1px solid $dark-base
+  background: rgba(255,255,255,1)
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(233,233,231,1) 100%)
+  padding: 10px 14px
+
+.goods-slide__mask
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(49, 46, 49, .33)
+  transition: opacity .5s  
+
+.flexbox 
+  .goods-slide__mask-inner
+    padding: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex-wrap: nowrap
+    align-items: center
+.goods-slide__mask-inner
+  padding: 25px 0
+  position: absolute
+  top: 50px
+  right: 0
+  left: 0
+  margin: auto
+  width: 120px
+  height: 120px
+  border-radius: 50%
+  background: rgba(49, 46, 49, 1)
+  text-align: center
+  color: #fff
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: #fff
+    text-decoration: none
+
+  .mask-text
+    margin-top: 10px
+
+.goods-slider_popular
+  .goods-slide
+    background: #fff
+  .new-goods-slide__preview
+    height: 155px
+    &:hover
+      .goods-slide__mask
+        opacity: 1
+        visibility: visible
+
+.goods-slide__title
+  font-size: 14px
+  .link_dark
+    text-decoration: none
+    font-size: 14px
+    &:hover
+      text-decoration: underline
+.goods-slide__action
+  +clr
+  margin: 10px 0 0
+  padding: 10px 0 0px
+  border-top: 1px solid #afaeae
+  .goods-slide__price
+    float: left
+    padding-top: 8px
+    font-size: 16px
+  .goods-slide__btn
+    float: right
+
+.new-goods-slide__preview
+  margin: 0 0 20px
+  &:hover
+    .goods-slide__mask
+      opacity: 1
+      visibility: visible
+  img 
+    max-height: 214px
+    margin: 0 auto

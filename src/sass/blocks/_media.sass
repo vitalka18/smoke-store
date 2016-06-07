@@ -1,0 +1,311 @@
+@media screen and (max-width: $break-tablet)
+  .header__bottom-center
+    padding-left: 0
+    text-align: center
+  
+  .nav-main
+    width: 100%
+  
+  .navbar-form-search
+    margin: 0
+    border-radius: 0
+    width: 100%
+    padding: 0
+    .input-group
+      width: 100%
+      .input-group-btn
+        width: 32px
+    .form-control, .btn
+      border-radius: 0
+      padding-top: 10px
+      padding-bottom: 10px
+      height: 42px
+      border-top-width: 0
+  .nav-main__item
+    &:first-child
+      border-left: 1px solid $nav-main-link-color
+
+  .sub-menu
+    li
+      width: 49%
+      &:nth-of-type(3n)
+        border-right: 1px solid #eee
+      &:nth-of-type(2n)
+        border-right: none
+  .cart-result
+    padding-right: 0
+    padding-left: 0
+@media screen and (max-width: $break-phone)
+  .navbar-form-search
+    float: left
+    margin-top: 8px
+    margin-bottom: 8px
+    padding-right: 60px
+    .form-control, .btn
+      border-top-width: 1px
+      height: 34px
+      padding-top: 6px
+      padding-bottom: 6px
+  .nav-main
+    margin: 0 0 10px
+    display: block
+
+  .nav-main__item
+    display: block
+    border-left: 1px solid $nav-main-link-color
+    border-top: 1px solid $nav-main-link-color
+    text-align: left
+    &:last-child
+      border-bottom: 1px solid $nav-main-link-color
+    &:hover
+      .nav-main__sub-menu
+        display: none
+  
+  .nav-main__sub-menu
+    position: static
+    padding: 10px 15px    
+
+  .sub-menu
+    li
+      padding-top: 15px
+      display: block
+      width: auto
+      border: none
+      border-bottom: 1px solid rgb(238, 238, 238) 
+      &:nth-of-type(3n)
+        border-right: none
+      &:last-child
+        border-bottom: none
+  .nav-main__link
+    text-align: left
+    position: relative
+    .touch-open
+      display: block
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      width: 40px
+      font-size: 16px
+      line-height: 40px
+      text-align: center
+      transition: transform .3s
+      &.open
+        transform: rotate(45deg)
+    &.has-sub  
+      &:hover,
+      &:focus,
+      &:active
+        &:after
+          display: none
+
+  .footer__contact
+    margin-left: 0
+
+  .footer .border-right
+    padding: 30px 5px 20px
+    border: none
+    border-bottom: 1px solid #000
+  
+  .footer__contact
+    padding-top: 30px
+    padding-bottom: 30px
+
+  .foot-nav
+    text-align: center
+    margin-bottom: 15px
+  .goods-slider-container
+    .slick-prev
+      margin-left: 8px
+    .slick-next
+      margin-right: 8px
+  .navbar-header
+    text-align: center
+  .navbar-brand
+    display: inline-block
+    float: none
+    margin-bottom: 15px
+  .header__action
+    text-align: center
+    .list-action
+      margin: 15px 0
+      float: none
+      display: inline-block
+  .header__cart
+    text-align: center
+
+  .header__top
+    .list-menu
+      float: none
+      text-align: center
+      margin-top: 5px
+      li
+        display: inline-block
+        float: none
+    .list-social
+      float: none
+      text-align: center
+      margin: 10px 0 5px
+      li
+        display: inline-block
+        float: none
+  .header__number
+    margin-bottom: 5px
+
+  .banner-container
+    .container
+      padding: 0
+      background: none
+    .row
+      margin: 0
+    [class*="col-"]
+      padding: 0
+  .banner
+    padding: 15px 0
+    text-align: center
+
+  .banner-left
+    background: rgb(49, 46, 49)
+  .banner-right
+    background: rgb(218, 32, 40)
+
+  .main-slider__jumbotron
+    position: static
+    max-width: 380px
+    margin: 15px auto 0px
+
+  .goods-slide:hover .goods-slide__mask
+    display: none
+
+  .map-header__support
+    text-align: center
+
+  .map-foot__form .form-control
+    width: 100%
+  
+  .catalog-head
+    margin-top: 20px
+
+  .catalog-nav-filter
+    .pagination-goods
+      margin-bottom: 20px
+      margin-left: 0
+      text-align: center
+      a
+        font-size: 20px
+    .form-control
+      width: 100%
+
+  .cart-action 
+    text-align: right
+    .form-control
+      display: inline-block
+    .navbar-left
+      margin-bottom: 15px
+  .cart-wrap
+    padding: 15px
+    .table-responsive
+      border: none
+  .table.table-cart
+    display: block
+    th, tbody, thead, tfoot, tr, td
+      display: block
+      width: auto
+    .cart-goods-img
+      display: inline-block
+    tr td
+      border: none
+      padding: 15px
+      text-align: center
+    tr
+      padding-top: 5px
+      border-bottom: 2px solid #000
+      &:last-child
+        border: none
+  .nav-tabs
+    border-bottom: none
+    >li
+      margin-top: 0px
+      display: block
+      float: none
+      box-shadow: none
+      border-bottom: 1px solid #a2a2a2
+      a
+        display: block
+        box-shadow: none
+      &.active 
+        >a, a:hover, a:focus
+          padding: 6px 25px
+
+        &:after
+          display: none
+  .tab-pane
+    padding: 10px
+
+  .step-form 
+    .to-left
+      float: none
+      margin-bottom: 15px
+    .to-right
+      float: none
+    .cart-result
+      .form-control
+        margin-bottom: 15px
+    .form-action
+      margin-top: 10px
+      padding-top: 25px
+      padding-bottom: 10px
+      .checkbox
+        margin-top: 0
+  .step__nav
+    margin-top: 25px
+    margin-bottom: 15px
+    ul
+      li
+        margin: 10px
+        &:not(:first-child):after
+          display: none
+  .step-form .table.table-cart tr td:not(:last-child)
+    padding-bottom: 0
+  .navbar.navbar-white
+    border-radius: 0
+  .modal-check
+    color: #fff
+    text-align: center
+    .modal-check-logo
+      margin-bottom: 25px
+      margin-top: 20px
+      padding: 0 20px
+      img
+        max-width: 100%
+    p
+      font-size: 26px
+      font-weight: bold
+    .btn
+      min-width: 100px
+      font-size: 16px
+    .copy
+      margin-top: -25px
+      padding: 25px
+    .sep-white
+      margin: 25px auto
+    .modal-check-action
+      margin-top: 40px
+      .btn:first-child
+        margin-right: 10px
+@media screen and (max-width: 440px)
+  .step__nav ul li
+    margin: 5px
+    a
+      width: 55px
+      height: 55px
+      line-height: 55px
+  .cart-action 
+    .btn, .form-control
+      width: 100%
+      display: block
+      margin-bottom: 10px
+    .navbar-left
+      margin-bottom: 15px
+      padding-bottom: 5px
+      border-bottom: 1px solid #2a2a2a

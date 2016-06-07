@@ -1,0 +1,184 @@
+//=include partials/header.html  
+
+<div class="page-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="#">Главная</a></li>
+      <li class="active">Личный кабинет</li>
+    </ol>
+
+    <div class="page">
+      <h1 class="page-title">Личные данные</h1>
+      <div class="page-body">
+        <div class="tab-wrap tab-page">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#presonal" aria-controls="presonal" role="tab" data-toggle="tab">Личные данные</a></li>
+            <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">История заказов</a></li>
+            <li role="presentation"><a href="#bonus" aria-controls="bonus" role="tab" data-toggle="tab">Мои бонусы</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="presonal">
+              <form class="row row_space_15">
+                <div class="col-md-4">
+                  <h4>Личные данные</h4>
+                  <div class="form-group">
+                    <label for="inputSurname" class=" control-label">Фамилия</label>
+                    <input type="text" class="form-control" id="inputSurname">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputName" class=" control-label">Имя</label>
+                    <input type="text" class="form-control" id="inputName">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputFatherName" class=" control-label">Отчество</label>
+                    <input type="text" class="form-control" id="inputFatherName">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputBirthday" class=" control-label">Дата рождения</label>
+                    <input type="text" class="form-control" id="inputBirthday">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputEmail" class=" control-label">Email</label>
+                    <input  class="form-control" id="inputEmail" type="email">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputTel" class=" control-label">Телефон</label>
+                    <input  class="form-control" id="inputTel" type="tel">
+                  </div>                  
+                </div>
+
+                <div class="col-md-4">
+                  <h4>Адрес доставки</h4>
+                  <div class="form-group">
+                    <label for="inputRegion" class=" control-label">Регион</label>
+                    <input type="text" class="form-control" id="inputRegion">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputCity" class=" control-label">Город</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputStreet" class=" control-label">Улица</label>
+                    <input type="text" class="form-control" id="inputStreet">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputHouse" class=" control-label">Дом</label>
+                    <input type="text" class="form-control" id="inputHouse" >
+                  </div>  
+
+                   <div class="form-group">
+                    <label for="inputHouseItem" class=" control-label">Корпус/строение</label>
+                    <input type="text" class="form-control" id="inputHouseItem" >
+                  </div>  
+
+                   <div class="form-group">
+                    <label for="inputFlat" class=" control-label">Квартира</label>
+                    <input type="text" class="form-control" id="inputFlat" >
+                  </div>        
+                </div>
+                
+                <div class="col-md-4">
+                  <h4>Изменение пароля</h4>
+                  <div class="form-group">
+                    <label for="password" class=" control-label">Старый пароль</label>
+                    <input type="password" class="form-control" id="password" >
+                  </div>  
+
+                  <div class="form-group">
+                    <label for="inputNewPassword" class=" control-label">Новый пароль</label>
+                    <input type="password" class="form-control" id="inputNewPassword" >
+                  </div>  
+
+                  <div class="form-group">
+                    <label for="inputRepeatPassqord" class=" control-label">Повторить новый пароль</label>
+                    <input type="password" class="form-control" id="inputRepeatPassqord" >
+                  </div>  
+
+                  <div class="form-action">
+                    <button type="submit" class="btn btn-red-dark btn-block">Изменить пароль</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="address">
+              <div class="table-responsive">
+                <table class="table-history">
+                  <thead>
+                    <tr>
+                      <th>№ заказа</th>
+                      <th>Дата заказа</th>
+                      <th>Сумма</th>
+                      <th>Статус</th>
+                      <th>Подробности</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12345</td>
+                      <td>12.04.16</td>
+                      <td>300 руб.</td>
+                      <td>отправлен</td>
+                      <td><a href="#" class="btn btn-arrow-grey">детали заказа <span class="glyphicon glyphicon-menu-right"></span></a></td>
+                    </tr>
+
+                     <tr>
+                      <td>12345</td>
+                      <td>12.04.16</td>
+                      <td>400 руб.</td>
+                      <td>доставлен</td>
+                      <td><a href="#" class="btn btn-arrow-grey">детали заказа <span class="glyphicon glyphicon-menu-right"></span></a></td>
+                    </tr>
+
+                     <tr>
+                      <td>12345</td>
+                      <td>12.04.16</td>
+                      <td>500 руб.</td>
+                      <td>доставлен</td>
+                      <td><a href="#" class="btn btn-arrow-grey">детали заказа <span class="glyphicon glyphicon-menu-right"></span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bonus">
+              <form>
+                <p>За 3 заказа вы набрали 45 бонусов!</p>
+                <br>
+                <p>Выбрать .......................................</p>
+                <br>
+                <div class="checkbox"><label>
+                  <input type="checkbox">При покупке.....
+                </label></div>
+                <div class="checkbox"><label>
+                  <input type="checkbox">При заказе.......
+                </label></div>
+                <div class="checkbox"><label>
+                  <input type="checkbox">При выборе......
+                </label></div>
+                <br>
+                <div class="form-action">
+                  <button type="submit" class="btn btn-red">Уточнить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+//=include partials/modal.html 
+//=include partials/footer.html  

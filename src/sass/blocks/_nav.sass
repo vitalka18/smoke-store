@@ -1,0 +1,247 @@
+.list-menu,
+.list-action
+  +clr
+  list-style: none
+  padding: 0
+  margin: 0
+.list-menu__item,
+.list-action__item
+  padding: 0 11px
+  float: left
+  border-right: 1px solid $header-link-color
+  &:last-child
+    padding-right: 0
+    border-right: none
+.list-menu__link
+  font-size: 12px
+  color: $header-link-color
+  text-decoration: none
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .list-menu__link_state_active
+    color: $header-link-color
+    text-decoration: underline
+
+.list-social
+  +clr
+  list-style: none
+  padding: 0
+  margin: 0
+.list-social__item
+  float: left
+  margin: 0 5px
+
+.list-social__link
+  color: $header-link-color
+  text-decoration: none
+  transition: opacity .3s
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .list-menu__link_state_active
+    color: $header-link-color
+    text-decoration: none
+    opacity: .7
+
+
+.list-action
+  +clr
+.list-action__item
+  float: left
+  padding: 7px 15px
+  border-right: 1px solid $dark-link
+  &:last-child
+    padding-right: 0
+    border-right: none
+.list-action__link
+  color: $dark-link
+  font-size: 14px
+  text-decoration: underline
+  &:hover,
+  &:focus,
+  &.active 
+    color: $dark-link
+    text-decoration: none
+  [class*="icon-"]
+    vertical-align: middle
+    margin-right: 8px
+
+.navbar
+  min-height: 0
+  border-radius: 0
+.navbar-white
+  margin-bottom: 0
+  border-top: 1px solid $dark-base
+  border-bottom: 1px solid $dark-base
+
+#mainMenu
+  position: relative
+
+.menu-xs
+  position: relative
+
+.navbar-toggle
+  position: absolute
+  right: 0
+  top: 1px
+  margin-right: 0
+  border: 1px solid #000
+  border-radius: 0
+  &:hover,
+  &:not(.collapsed)
+    background: #da2028
+    .icon-bar
+      background: #fff
+  .icon-bar
+    background: $nav-main-link-color  
+
+.nav-main
+  display: table
+  width: 680px
+
+.nav-main__item
+  display: table-cell
+  border-right: 1px solid $dark-base
+  &:hover
+    .nav-main__sub-menu
+      display: block
+
+.nav-main__link
+  position: relative
+  display: block
+  padding: 11px 20px
+  text-decoration: none
+  text-decoration: none
+  text-align: center
+  color: $nav-main-link-color
+  .touch-open
+    display: none
+  &:hover,
+  &:focus,
+  &:active
+    text-decoration: none
+    color: #fff
+    background: #da2028
+  &.has-sub  
+    &:hover,
+    &:focus,
+    &:active
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        left: 0
+        bottom: -9px
+        margin: auto
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid #da2028
+        z-index: 101
+        width: 10px
+.nav-main__sub-menu
+  display: none
+  position: absolute
+  margin-top: -1px
+  top: 100%
+  left: 5px
+  right: 5px
+  padding: 25px 15px
+  background: rgba(49, 46, 49, .88)
+  border: 1px solid #cdbdbd
+  border-top: none
+  z-index: 100  
+
+.sub-menu
+  text-align: left
+  li
+    display: inline-block
+    width: 32%
+    vertical-align: top
+    padding: 0 20px 15px
+    text-align: left
+    border-right: 1px solid #eee
+    &:nth-of-type(3n)
+      border-right: none
+    a
+      color: #fff
+      &:hover
+        color: #fe6c6c
+        text-decoration: none
+.sub-menu__title
+  text-decoration: underline
+  font-size: 14px
+  padding-left: 50px
+  margin-bottom: 10px
+.sub-menu__body
+  +clr
+.sub-menu__preview
+  float: left
+  width: 40px
+  height: 50px
+  background-position: center top
+  background-repeat: no-repeat
+  background-image: url('attr(data-bg)')
+.sub-menu__text
+  margin-left: 50px
+  font-size: 12px
+
+.vertical-list
+  list-style: none
+
+.vertical-list__item
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.vertical-list__link
+  text-decoration: none
+  color: $footer-nav-color
+  &:hover
+    color: $footer-nav-color
+.breadcrumb
+  padding: 0
+  margin: 15px 0 25px
+  background: none
+  li
+    position: relative
+    &:not(:last-child)
+      margin-right: 21px
+    &.active a
+      text-decoration: underline
+  a, li.active
+    color: #2f424f
+    text-decoration: none
+    font-size: 12px
+    &:hover
+      text-decoration: underline
+.breadcrumb>li+li:before
+  content: ''
+  position: absolute
+  height: 18px
+  display: block
+  width: 1px
+  padding: 0
+  top: 0
+  bottom: 0
+  margin: auto
+  left: -11px
+  background: #a2a2a2
+
+.pagination-goods
+  padding: 5px 0
+  margin-left: 20px
+  li
+    display: inline-block
+    font-size: 12px
+    a
+      color: #2f424f
+      text-decoration: none
+      &:hover
+        color: #a90525
+    &.active
+      a 
+        color: #a90525

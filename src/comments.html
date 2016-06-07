@@ -1,0 +1,74 @@
+//=include partials/header.html  
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#">Главная</a></li>
+    <li class="active">Отзывы</li>
+  </ol>
+
+  <h1 class="page-title">Отзывы</h1>
+  
+  <div class="reviews-form-wrap">
+    <h3>Задать вопрос и написать отзыв</h3>
+    <div class="reviews-form">
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="inputName">Имя</label>
+          <input type="email" class="form-control" id="inputName">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="inputName">Email</label>
+          <input type="text" class="form-control" id="inputName">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-8">
+          <label for="inputMessage">Комментарий</label>
+          <textarea name="inputMessage" id="inputMessage" rows="10" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="form-action">
+        <button type="submit" class="btn btn-red">Отправить</button>
+        <button type="reset" class="btn btn-reset">Отменить</button>
+      </div>
+    </div>
+
+    <div class="last-review-wrap">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="..." alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          <div class="media-date"><time>21.03.16</time></div>
+          <form class="media-rating">
+            
+          </form>
+          
+          <h4 class="media-name">Название товара</h4>
+
+          <div class="media-review media-review-positive">
+            <h5 class="media-review-title">Преимущества</h5>
+            <p>Неплохо защищает корпус, черный чехол на черном евике выглядит красиво, плотно лежит в руке и не дает выпасть девайсу (только если не держать его вверх ногами).</p>
+          </div>
+
+          <div class="media-review media-review-unpositive">
+            <h5 class="media-review-title">Недостатки</h5>
+            <p>Через некоторое время растянулся и начал сваливаться (лечится прогревом чехла на батарее и последующим его натягивании на девайс). Отсутствие крепления для ремешка. Силикон через месяц начал стираться и немного облезать на углах. Не критично, но подозреваю что через пару месяцев будет еще хуже.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+//=include partials/modal.html 
+//=include partials/footer.html  

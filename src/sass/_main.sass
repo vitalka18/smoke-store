@@ -1,0 +1,724 @@
+/***********************************************
+ * typography
+ ***********************************************/
+.goods-title
+  margin: 4px 0 25px
+
+.page-title
+  margin: 0 0 20px
+  color: #2f424f
+  font-size: 24px
+
+.rating-xs
+  font-size: 20px
+
+label
+  font-weight: normal
+
+p
+  margin-bottom: 15px
+
+.modal-backdrop.in
+  opacity: .85
+/***********************************************
+ * HEADER
+ ***********************************************/
+.header__top
+  padding: 4px 0
+  background: $header-top-bg
+  .list-menu,
+  .list-social
+    float: right
+  .list-social
+    margin-right: 35px
+
+.header__bottom
+  padding: 12px 0
+  .callback
+    color: $dark-link
+    [class*="icon-"]
+      vertical-align: middle
+      margin-right: 5px
+    .text
+      position: relative
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -3px
+        right: 0
+        left: 0
+        border-top: 1px dashed $dark-link
+    &:hover,
+    &:focus,
+    &.active 
+      color: $dark-link
+      text-decoration: none
+      .text:after
+        display: none
+.header__bottom-center
+  padding-left: 80px
+
+.navbar-brand
+  padding: 0
+  height: auto
+
+.header__cart
+  margin-top: 5px
+  text-align: right
+  font-size: 16px
+
+.cart-link
+  color: $dark-link
+  text-decoration: none
+  transition: opacity .3s
+  .count
+    font-size: 18px
+  &:hover,
+  &:focus,
+  &.active 
+    color: $dark-link
+    opacity: .7
+    text-decoration: none
+  [class*="icon-"]
+    position: relative
+    top: -2px
+    vertical-align: middle
+    margin-right: 10px
+
+.header__number a
+  font-size: 27px
+  color: $dark-link
+  text-decoration: none
+  &:hover,
+  &:focus,
+  &.active 
+    color: $dark-link
+    opacity: .7
+    text-decoration: none
+.header__action
+  +clr
+  .list-action
+    float: right
+
+.navbar-form-search
+  width: 255px
+  margin-top: 4px
+  margin-bottom: 4px
+  .form-control
+    border-color: $dark-base
+    border-right: none
+    &:focus
+      box-shadow: none
+  .btn
+    border-color: $dark-base
+    border-left: none
+/***********************************************
+ * FOOTER
+ ***********************************************/
+.footer
+  padding: 0
+  margin-top: 30px
+  background: $footer-bg
+  .border-right  
+    border-right: 1px solid #636466
+    box-shadow: 1px 0 0 0 #fff
+    padding: 40px 0 50px
+.copyright
+  padding: 25px 0
+  background: $copyright-bg
+
+.footer__contact-act 
+  margin-bottom: 14px
+
+.footer__contact
+  padding: 40px 0 50px
+  text-align: center
+  margin-left: 20px  
+
+.footer__tel,
+.footer__email
+  font-size: 18px
+  display: inline-block
+  font-weight: bold
+  text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: none
+
+.footer__tel
+  color: #ee222a
+  &:hover
+    color: #ee222a
+.footer__email
+  color: #3e3e3e
+  &:hover
+    color: #3e3e3e
+
+.foot-nav
+  .title
+    margin: 0 0 15px
+    color: #3e3e3e
+    font-size: 16px
+    font-weight: bold
+
+.copyright__text
+  margin-bottom: 5px
+  color: #101010
+  font-size: 16px
+
+.copyright__logo
+  vertical-align: middle
+  margin-right: 15px
+
+.copyright__created
+  color: #101010
+  .icon-created
+    vertical-align: middle
+    margin-left: 10px
+
+.banner-container
+  background: linear-gradient(to right, #312e31 0%, #312e31 50%, #da2028 50%, #da2028 100%)
+  font-size: 19px
+  font-weight: bold
+  color: #fff
+  margin: 40px auto 30px
+  .banner-title 
+    margin-bottom: 10px
+  .container
+    padding: 10px 5px 9px
+    background: url(../img/banner.jpg) center bottom no-repeat
+
+.icon-round
+  position: relative
+  width: 23px
+  height: 23px
+  border: 1px solid #3e3e3e
+  border-radius: 50%
+  vertical-align: middle
+  [class*="icon-"]
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+
+/***********************************************
+ * FORM
+ ***********************************************/
+.form-control
+  height: 32px
+  padding-top: 5px
+  padding-bottom: 5px
+  border-radius: 3px
+  border-color: #7d756b
+  &:focus
+    box-shadow: none
+    outline: none
+
+.form-subscribe
+  padding: 15px
+  border: 1px solid #bababa
+  border-radius: 3px
+  background: #ebeaea
+  text-align: left
+  .form-control
+    border-color: #fff
+    box-shadow: none
+
+.form-title
+  margin: 0 0 15px
+  font-size: 16px
+  color: #3e3e3e
+
+.form-filter
+  background: #f7f7f7
+  border: 1px solid #a2a2a2
+  border-radius: 3px
+  color: #0d1317
+  .form-action
+    padding: 20px 10px
+    +clr
+.range-block
+  padding: 20px 10px 10px
+
+.range-block--head
+  margin-bottom: 10px
+  display: block
+  font-weight: normal
+  font-size: 14px
+  
+
+.range-block__descibe
+  margin: 0 0 10px
+  input
+    margin: 0 3px
+    width: 64px
+    height: 20px
+    padding: 0 4px
+    border: 1px solid #797979
+    border-radius: 3px
+    vertical-align: middle
+
+.slider-track
+  height: 10px
+  background: #fff
+  border: 1px solid #a2a2a2
+
+.range-block__control
+  .tooltip-inner 
+    background: #a90525
+    color: #fff
+  .tooltip.top .tooltip-arrow
+    border-top-color: #a90525
+  .tooltip.in
+    opacity: 1
+.slider-track-low, .slider-track-high
+  background: #fff
+
+.slider-selection
+  background: #a90525
+
+.slider-handle
+  height: 20px
+  width: 10px
+  background: #737373
+
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle
+  margin-left: -5px
+
+.slider-handle.round
+  border-radius: 5px
+
+.form-filter__params
+  border-bottom: 1px solid #a2a2a2
+
+.filter-params__body
+  background: #fff
+  padding: 10px 20px
+  label
+    color: #0d1317
+
+.checkbox-size
+  cursor: pointer
+  position: relative
+  margin: 7px 8px 7px 0
+  font-weight: 400
+  &:hover span,
+  input[type="checkbox"]:checked + span
+    background: #da2028
+    color: #fff
+  input[type="checkbox"]
+    opacity: 0
+    position: absolute
+    clip: rect(0,0,0,0)
+  span
+    background: #fff
+    display: block
+    min-width: 38px
+    padding: 2px 3px
+    border: 1px solid #797979
+    border-radius: 3px
+    vertical-align: top
+    text-align: center
+    transition: all .3s
+
+.catalog-nav-filter
+  margin: 20px 0
+  .form-control
+    padding-right: 30px
+    width: 180px
+    color: #2f424f
+    font-size: 12px
+    appearance: none !important
+    background: url(../img/select.png) right center no-repeat
+
+.mb-30
+  margin-bottom: 30px
+
+.btn-block-xs
+  display: block
+  width: 100%
+.max-width-160-xs
+  max-width: 160px
+  display: inline
+
+.modal-header
+  text-align: center
+  border-color: #383838
+  color: #383838
+
+.modal-dialog-check
+  width: 100%
+.modal-check
+  color: #fff
+  text-align: center
+  .modal-check-logo
+    margin-bottom: 50px
+    margin-top: 30px
+    padding: 0 30px
+    img
+      max-width: 100%
+  p
+    font-size: 32px
+    font-weight: bold
+  .btn
+    min-width: 160px
+    font-size: 24px
+  .copy
+    margin-top: -50px
+    padding: 50px
+    background: #000
+    color: #808b92
+    font-size: 16px
+  .sep-white
+    max-width: 960px
+    margin: 50px auto
+  .modal-check-action
+    margin-top: 80px
+    .btn:first-child
+      margin-right: 180px
+.sep-white
+  border-top-color: 1px solid white
+  margin: 50px 0
+/***********************************************
+ * panel
+ ***********************************************/
+.contact-panel
+  border: 1px solid #a2a2a2
+  margin-bottom: 145px
+  border-radius: 3px
+.contact-panel-top  
+  padding: 40px 20px 30px
+  font-size: 19px
+  color: #000
+  .row
+    text-align: center
+  a
+    color: #000
+    &:hover
+      text-decoration: none
+      color: #000
+
+.map-header__support
+  margin-top: 50px
+  padding: 0 20px
+  font-size: 16px
+  text-align: right
+  p 
+    color: #000
+    & + p
+      margin-top: 5px
+
+.map-header
+  padding: 12px 30px
+  border-top: 1px solid #a2a2a2
+  border-bottom: 1px solid #a2a2a2
+  background: #da2028
+  color: #fff
+  font-size: 16px
+
+#map-canvas
+  height: 380px
+  width: 100%
+  border-bottom: 1px solid #a2a2a2
+
+.map-foot
+  padding: 45px 45px 70px
+  background: #383838
+  text-align: center
+  color: #fff
+  h2
+    font-size: 20px
+    font-weight: bold
+    margin: 0 0 10px
+  p
+    font-size: 16px
+    margin-bottom: 20px
+
+  .form-control
+    width: 280px
+    margin-right: 5px
+
+.catalog-head
+  margin: 0 0 20px
+  padding: 0 0 15px
+  color: #2f424f
+  font-size: 28px
+  border-bottom: 1px solid #000
+  h1
+    font-size: 28px
+
+.goods-item
+  position: relative
+  padding: 10px 5px
+  margin-bottom: 10px
+  border: 1px solid #7d756b
+  border-radius: 3px
+  background: rgba(255,255,255,1)
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(233,233,231,1) 100%)
+  .new-goods-slide__preview
+    height: 216px
+    text-align: center
+    img
+      max-height: 216px
+    &:hover
+      .goods-slide__mask
+        display: block
+        visibility: visible
+        opacity: 1
+
+.cart-wrap
+  font-size: 16px
+  padding: 20px 40px
+  .table-responsive
+    + .cart-result
+      margin-top: 0
+.cart-action
+  margin: 40px 0 20px
+  .form-control
+    width: 130px
+
+.cart-result
+  margin: 20px 0
+  padding: 20px 110px
+  border-top: 1px solid #000
+  border-bottom: 1px solid #000
+  text-align: right
+  font-size: 22px
+  color: #000
+  .value
+    display: inline-block
+    margin-left: 30px
+
+
+.table.table-cart 
+  margin: 0
+  font-size: 16px
+  color: #000
+  tr td
+    padding: 40px 10px 
+    vertical-align: middle
+    border-color: #000
+  tr:first-child td
+    border-top: none  
+.cart-name
+  font-size: 16px
+  a
+    color: #000
+    text-decoration: none
+.table-cart__info
+  .describe
+    font-size: 14px
+    margin-top: 15px
+.table-cart__img
+  width: 110px
+.table-cart__count
+  width: 100px
+  min-width: 100px
+  .form-control
+    height: 34px
+  .bootstrap-touchspin .input-group-btn-vertical>.btn
+    padding-top: 8px
+    padding-bottom: 8px
+    border-color: rgb(125, 117, 107)
+    color: rgb(125, 117, 107)
+.cart-goods-img
+  display: block
+  overflow: hidden
+  border: 1px solid #a2a2a2
+  border-radius: 3px
+
+.table-cart__price,
+.table-cart__total,
+.table-cart__delete
+  text-align: center
+
+.table-history
+  th
+    background: #f7f7f7
+    font-weight: normal
+  th, td
+    padding: 10px 15px
+    text-align: center
+    border: 1px solid #c1c1c1
+    vertical-align: middle
+    transition: background .3s
+  tr:hover
+    background: #f7f7f7
+.nav-tabs
+  border-bottom: none
+  >li
+    margin-top: 11px
+    >a
+      padding: 6px 25px
+      margin-right: 0px
+      margin-left: 1px
+      border: none
+      color: #1e2a32
+      font-size: 16px
+      box-shadow: 0 0 0 1px #a2a2a2
+      border-radius: 3px 3px 0 0
+      transition: background .3 
+      &:hover
+        background: #da2028
+        color: #fff
+    &.active 
+      margin-top: 0
+      position: relative
+      >a, a:hover, a:focus
+        padding: 12px 25px
+        border: none
+        background: #da2028
+        color: #fff
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        left: 30px
+        bottom: -9px
+        margin: auto
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid #da2028
+        z-index: 101
+        width: 10px
+
+.table-striped
+  border: 1px solid #c1c1c1
+  tfoot, tbody, thead
+    tr
+      th, td
+        padding-left: 20px
+        padding-right: 20px
+
+.table-striped>tbody>tr:nth-of-type(odd)  
+  background: #f7f7f7
+
+.tab-pane
+  padding: 30px
+  border: 1px solid #a2a2a2
+  border-radius: 0 3px 3px 3px
+  color: #000
+  font-size: 16px
+  h4
+    margin: 0 0 20px
+    font-size: 18px
+
+  h5
+    font-weight: bold
+
+  label + .form-control
+    margin-top: 5px
+
+.row_space_15
+  margin: 0 -20px
+  [class*="col-"] 
+    padding-right: 20px
+    padding-left: 20px
+
+.checkbox-group
+  margin: 20px 0 40px
+
+.step-form
+  .cart-result
+    padding: 35px 0
+    & + .form-action
+      border-top: none
+      padding-top: 0
+      margin-top: 35px
+  .table.table-cart tr td
+    padding: 20px 10px
+  .radio-group
+    margin-bottom: 35px
+    .radio
+      margin-bottom: 15px
+    input[type="radio"], input[type="checkbox"]
+      margin-top: 5px
+  .control-label
+    text-align: left
+  .tab-pane
+    border-radius: 3px
+
+  .form-action
+    margin-top: 20px
+    padding-top: 35px
+    border-top: 1px solid #46423c
+
+  .to-left
+    float: left
+  .to-right
+    float: right
+
+  .btn-lg
+    width: 125px
+    padding: 10px 16px
+    font-size: 14px
+    & + .btn-lg
+      margin-left: 15px
+
+  .step-title
+    font-size: 20px
+    color: #2f424f
+    margin-bottom: 35px
+
+.step__nav
+  margin-bottom: 35px
+  margin-top: 25px
+  ul
+    text-align: center
+
+    li
+      float: none
+      display: inline-block
+      margin: 0 50px
+      position: relative
+      &:not(:first-child):after
+        content: ''
+        display: block
+        position: absolute
+        height: 1px
+        border-top: 1px dashed #3c3c3b
+        width: 180px
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        z-index: -1
+      a 
+        padding: 0
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background: #787777
+        color: #fff
+        line-height: 65px
+        text-align: center
+        font-size: 24px
+        transition: background .3s
+        &:hover,
+        &:focus
+          background: #a90525
+      &.active,
+      &.active:hover,
+      &.active:focus
+        a,
+        a:focus,
+        a:hover
+          background: #a90525
+
+.jumbotron-thank
+  color: #2f424f
+  font-size: 16px
+  padding: 40px 30px 60px
+  border: 1px solid rgb(162, 162, 162)
+  border-radius: 3px
+
+.jumbotron-thank__action
+  margin-top: 40px
+
+.jumbotron-thank__title
+  margin-bottom: 30px
+  color: #2f424f
+  font-size: 24px

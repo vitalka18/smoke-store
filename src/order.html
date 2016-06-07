@@ -1,0 +1,199 @@
+//=include partials/header.html  
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#">Главная</a></li>
+    <li class="active">Оформление заказа</li>
+  </ol>
+
+  <h1 class="page-title">Оформление заказа</h1>
+
+  <div class="order-wrap">
+    <form id="orderForm" class="step-form">
+      <div class="step-form__inner">
+        <div class="step__nav navbar">
+          <ul>
+            <li><a href="#tab1" data-toggle="tab">1</a></li>
+            <li><a href="#tab2" data-toggle="tab">2</a></li>
+            <li><a href="#tab3" data-toggle="tab">3</a></li>
+            <li><a href="#tab4" data-toggle="tab">4</a></li>
+          </ul>
+        </div>
+
+        <div class="tab-content">
+          <div class="tab-pane" id="tab1">
+            <div class="step__body">
+              <h4 class="step-title">Шаг 1: Контактные данные</h4>
+              <div class="row form-horizontal">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="telInputName" class="control-label col-md-3 col-sm-3">Имя</label>
+                    <div class="col-md-9 col-sm-9"><input type="text" class="form-control" id="telInputName"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="telInput" class="control-label col-md-3 col-sm-3">Телефон</label>
+                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="telInput"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="emailInput" class="control-label col-md-3 col-sm-3">Email</label>
+                     <div class="col-md-9 col-sm-9"><input type="email" class="form-control" id="emailInput"></div>
+                  </div>
+                </div>
+                <div class="col-md-5 col-md-offset-2">
+                  <div class="form-group">
+                    <label for="region" class="control-label col-md-3 col-sm-3">Регион</label>
+                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="region"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="city" class="control-label col-md-3 col-sm-3">Город</label>
+                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="city"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address" class="control-label col-md-3 col-sm-3">Адрес</label>
+                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="address"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-action clearfix">
+                <div class="to-left">
+                  <div class="checkbox "><label>
+                    <input type="checkbox"> Создать личный кабинет
+                  </label></div>
+                </div>
+
+                <div class="to-right">
+                  <a class="btn btn-lg btn-reset btn-prev">Вернуться</a>
+                  <a class="btn btn-lg btn-buy btn-next">Далее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab2">
+            <div class="step__body">
+              <h4 class="step-title">Шаг 2: Выбор способа доставки</h4>
+              <div class="radio-group">
+                <div class="radio"><label>
+                  <input type="radio"> Самовывоз (бесплатно)
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Курьерская доставка по Москве (бесплатно)
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Курьерская доставка по МО (бесплатно)
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Почта России (В любую точку РФ) (300 руб)
+                </label></div>
+              </div>
+              <div class="form-action clearfix">
+                <div class="to-right">
+                  <a class="btn btn-lg btn-reset btn-prev">Вернуться</a>
+                  <a class="btn btn-lg btn-buy btn-next">Далее</a>
+                </div>
+              </div>
+            </div>   
+          </div>
+          <div class="tab-pane" id="tab3">
+            <div class="step__body">
+              <h4 class="step-title">Шаг 3: Выбор способа оплаты</h4>
+              <div class="radio-group">
+                <div class="radio"><label>
+                  <input type="radio">      Наличными в магазине
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Наличными курьеру
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Банковской картой
+                </label></div>
+
+                <div class="radio"><label>
+                  <input type="radio"> Robokassa
+                </label></div>  
+              </div> 
+             
+              <div class="form-action clearfix">
+                <div class="to-right">
+                  <a class="btn btn-lg btn-reset btn-prev">Вернуться</a>
+                  <a class="btn btn-lg btn-buy btn-next">Далее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab4">
+            <div class="step__body">
+              <h4 class="step-title">Шаг 3: Выбор способа оплаты</h4>
+              <div class="table-responsive">
+                <table class="table table-cart">
+                  <tr>
+                    <td class="table-cart__img">
+                      <a class="cart-goods-img" href="#"><img src="img/cart-goods.png" alt="Товар"></a>
+                    </td>
+                    <td class="table-cart__info">
+                      <h3 class="cart-name"><a href="#">Наименование товара</a></h3>
+                      <div class="describe">
+                        Жидкость Charlie's <br>
+                        Chalk Dust Slam berry
+                      </div>
+                    </td>
+                    <td class="table-cart__price">
+                      1500 руб.
+                    </td>
+                    <td class="table-cart__count">
+                      <input type="text" class="form-control js-spin" value="3">
+                    </td>
+                    <td class="table-cart__total">4500 руб.</td>
+                    <td class="table-cart__delete"><a href="#" class="delete"><span class="icon-delete"></span></a></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="cart-result clearfix">
+                <div class="to-left">
+                  <div class="navbar-left form-inline">
+                    <input type="text" class="form-control" placeholder="Промокод"> <button class="btn btn-red-dark">Применить</button>
+                  </div>
+                </div>
+                <div class="to-right">
+                  Итого <span class="value">9000 руб.</span>
+                </div>
+                
+              </div>
+              <div class="form-action clearfix">
+                <div class="to-right">
+                  <a class="btn btn-lg btn-reset btn-prev">Вернуться</a>
+                  <a class="btn btn-lg btn-buy btn-finish">Далее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>  
+
+</div>
+<div id="orderThank" class="jumbotron-thank text-center" style="display:none;">
+  <h3 class="jumbotron-thank__title">Спасибо за заказ!</h3>
+  <p>Номер Вашего заказ 23458</p>
+  <p>В ближайшее время с Вами <br>
+  свяжется оператор для уточнения заказа <br>
+  Историю заказов можно посмотреть в личном кабинете.</p>
+  <div class="jumbotron-thank__action">
+    <a href="#" class="btn btn-lg btn-red-dark">Вернуться к покупкам</a>
+  </div>
+</div>
+
+//=include partials/modal.html 
+//=include partials/footer.html  

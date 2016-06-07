@@ -1,0 +1,145 @@
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus,
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus
+  outline: none
+
+.btn
+  border-radius: 3px
+  padding-top: 5px
+  padding-bottom: 5px
+  outline: none
+  [class*="icon-"]
+    vertical-align: middle
+
+.btn-success
+  background: #49bb7b
+.btn-danger
+  background: #e1384b
+.btn-width-md
+  min-width: 160px
+
+.btn-buy
+  border: none
+  background: $btn-buy-bg
+  color: $btn-buy-color
+  border-bottom: 4px solid $btn-buy-border
+  transition: background .3s
+  &:hover,
+  &:focus,
+  &.active
+    background: $btn-buy-border
+    color: $btn-buy-color
+.btn-red, .btn-arrow-grey
+  background: $btn-buy-bg
+  color: $btn-buy-color
+  transition: background .3s
+  [class*="icon-"]
+    margin-left: 5px
+  &:hover,
+  &:focus,
+  &.active
+    color: $btn-buy-color
+    background: $btn-buy-border
+
+.btn-arrow-grey
+  font-size: 14px
+  padding: 2px 10px
+  background: #383838
+  &:hover,
+  &:focus,
+  &.active
+    background: #a90525
+
+.btn-red-dark
+  background: #a90525
+  color: $btn-buy-color
+  transition: opacity .3s
+  &:hover,
+  &:focus,
+  &.active
+    color: #fff
+    opacity: .7
+.btn-reset
+  padding-top: 3px
+  padding-bottom: 3px
+  background: #fff
+  border: 3px solid #878383
+  color: #343434
+  transition: opacity .3s
+  &:hover,
+  &:focus,
+  &.active
+    opacity: .8
+.btn-link
+  border: 1px solid $btn-link-border-color
+  color: $btn-link-color
+  text-decoration: none
+  &:hover,
+  &:focus,
+  &.active
+    text-decoration: none
+    color: $btn-buy-bg
+    background: $btn-link-color
+    border-color: $btn-link-color
+
+.btn-big
+  padding-top: 7px
+  padding-bottom: 7px
+  font-size: 18px
+
+.link_dark
+  color: $dark-link
+  text-decoration: underline
+  &:hover,
+  &:focus,
+  &.active
+    color: $dark-link
+    text-decoration: none
+
+.btn-params
+  display: block
+  width: 100%
+  padding: 13px 12px
+  border-radius: 0
+  border: none
+  border-top: 1px solid #a2a2a2
+  background: #f7f7f7
+  text-align: left
+  color: #0d1317
+  text-decoration: underline
+  transition: background .3s
+  &:hover
+    background: #da2028
+    color: #fff
+    text-decoration: none
+  &[aria-expanded="true"]
+    background: #da2028
+    color: #fff
+    text-decoration: none
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 10px
+      bottom: -9px
+      margin: auto
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-top: 10px solid #da2028
+      z-index: 101
+      width: 10px
+
+.btn-close
+  position: absolute
+  right: -10px
+  top: -10px
+  display: block
+  width: 28px
+  height: 28px
+  border: 1px solid #393939
+  border-radius: 50%
+  background: #fff
+  font-size: 19px
+  text-align: center
+  line-height: 26px
+  color #393939

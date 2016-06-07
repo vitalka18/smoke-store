@@ -1,0 +1,184 @@
+$icons: (0:0)
+$icons: map-merge($icons,(btn-arrow: (X: -106px, Y:0px, W: 7px, H: 13px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cart-preview: (X: -46px, Y:0px, W: 36px, H: 33px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(cart: (X: -32px, Y:-41px, W: 26px, H: 24px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(created: (X: 0px, Y:-41px, W: 28px, H: 27px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(delete: (X: -86px, Y:0px, W: 16px, H: 16px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(enter: (X: 0px, Y:-72px, W: 15px, H: 15px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(fb-ft: (X: -106px, Y:-17px, W: 7px, H: 13px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(fb-hd: (X: -106px, Y:-34px, W: 6px, H: 12px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(in-ft: (X: 0px, Y:-91px, W: 11px, H: 11px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(in-hd: (X: -30px, Y:-91px, W: 11px, H: 10px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(next: (X: -86px, Y:-20px, W: 12px, H: 20px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(prev: (X: -86px, Y:-44px, W: 12px, H: 20px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(search: (X: -19px, Y:-72px, W: 14px, H: 14px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(small-logo: (X: 0px, Y:0px, W: 42px, H: 37px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tel: (X: -62px, Y:-41px, W: 17px, H: 24px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tw-ft: (X: -15px, Y:-91px, W: 11px, H: 11px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tw-hd: (X: -73px, Y:-72px, W: 11px, H: 8px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(vk-ft: (X: -37px, Y:-72px, W: 15px, H: 9px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(vk-hd: (X: -56px, Y:-72px, W: 13px, H: 8px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(yb-ft: (X: -45px, Y:-91px, W: 11px, H: 7px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(yt-hd: (X: -88px, Y:-72px, W: 11px, H: 8px, TW: 113px, TH: 102px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-btn-arrow
+//	width: 7px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -106px 0px
+//
+//.icon-cart-preview
+//	width: 36px
+//	height: 33px
+//	background-image: url('../img/icons.png')
+//	background-position: -46px 0px
+//
+//.icon-cart
+//	width: 26px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -32px -41px
+//
+//.icon-created
+//	width: 28px
+//	height: 27px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -41px
+//
+//.icon-delete
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: -86px 0px
+//
+//.icon-enter
+//	width: 15px
+//	height: 15px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -72px
+//
+//.icon-fb-ft
+//	width: 7px
+//	height: 13px
+//	background-image: url('../img/icons.png')
+//	background-position: -106px -17px
+//
+//.icon-fb-hd
+//	width: 6px
+//	height: 12px
+//	background-image: url('../img/icons.png')
+//	background-position: -106px -34px
+//
+//.icon-in-ft
+//	width: 11px
+//	height: 11px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -91px
+//
+//.icon-in-hd
+//	width: 11px
+//	height: 10px
+//	background-image: url('../img/icons.png')
+//	background-position: -30px -91px
+//
+//.icon-next
+//	width: 12px
+//	height: 20px
+//	background-image: url('../img/icons.png')
+//	background-position: -86px -20px
+//
+//.icon-prev
+//	width: 12px
+//	height: 20px
+//	background-image: url('../img/icons.png')
+//	background-position: -86px -44px
+//
+//.icon-search
+//	width: 14px
+//	height: 14px
+//	background-image: url('../img/icons.png')
+//	background-position: -19px -72px
+//
+//.icon-small-logo
+//	width: 42px
+//	height: 37px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-tel
+//	width: 17px
+//	height: 24px
+//	background-image: url('../img/icons.png')
+//	background-position: -62px -41px
+//
+//.icon-tw-ft
+//	width: 11px
+//	height: 11px
+//	background-image: url('../img/icons.png')
+//	background-position: -15px -91px
+//
+//.icon-tw-hd
+//	width: 11px
+//	height: 8px
+//	background-image: url('../img/icons.png')
+//	background-position: -73px -72px
+//
+//.icon-vk-ft
+//	width: 15px
+//	height: 9px
+//	background-image: url('../img/icons.png')
+//	background-position: -37px -72px
+//
+//.icon-vk-hd
+//	width: 13px
+//	height: 8px
+//	background-image: url('../img/icons.png')
+//	background-position: -56px -72px
+//
+//.icon-yb-ft
+//	width: 11px
+//	height: 7px
+//	background-image: url('../img/icons.png')
+//	background-position: -45px -91px
+//
+//.icon-yt-hd
+//	width: 11px
+//	height: 8px
+//	background-image: url('../img/icons.png')
+//	background-position: -88px -72px
+//

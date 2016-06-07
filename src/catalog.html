@@ -1,0 +1,469 @@
+//=include partials/header.html  
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">Каталог</a></li>
+    <li class="active">Жидкость</li>
+  </ol>
+
+  <div class="catalog-wrap">
+    <div class="row">
+      <div class="col-md-3">
+        <form class="form-filter">
+          <div class="range-block">
+            <label class="range-block--head">Цена, руб.</label>
+            <div class="range-block__descibe">
+              от: <input class="range-block__input js-slider-from" type="text" value="250"> до: <input class="range-block__input js-slider-to" value="450" type="text">
+            </div>
+            <div class="range-block__control">
+              <input class="js-range" type="text" data-slider-min="100" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]">
+            </div>
+          </div>
+          
+          <aside class="form-filter__params">
+            <div class="filter-params">
+              <div class="filter-params__head">
+                <button class="btn btn-params" type="button" data-toggle="collapse" data-target="#filterCategory" aria-expanded="false" aria-controls="collapseExample">
+                  Категории
+                </button>
+              </div>
+              <div class="filter-params__body collapse" id="filterCategory">
+                <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                    </label>
+                  </div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+              </div>
+            </div>
+
+             <div class="filter-params">
+              <div class="filter-params__head">
+                <button class="btn btn-params" type="button" data-toggle="collapse" data-target="#filterBrand" aria-expanded="false" aria-controls="collapseExample">
+                  Производители
+                </button>
+              </div>
+              <div class="filter-params__body collapse" id="filterBrand">
+                <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                    </label>
+                  </div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+              </div>
+            </div>
+
+             <div class="filter-params">
+              <div class="filter-params__head">
+                <button class="btn btn-params" type="button" data-toggle="collapse" data-target="#filterSize" aria-expanded="false" aria-controls="collapseExample">
+                  Объем, мл
+                </button>
+              </div>
+              <div class="filter-params__body collapse" id="filterSize">
+                <label class="checkbox-size"><input type="checkbox"><span>100</span></label>
+                <label class="checkbox-size"><input type="checkbox"><span>10</span></label>
+                <label class="checkbox-size"><input type="checkbox"><span>15</span></label>
+                <label class="checkbox-size"><input type="checkbox"><span>25</span></label>
+                <label class="checkbox-size"><input type="checkbox"><span>30</span></label>
+                <label class="checkbox-size"><input type="checkbox"><span>30</span></label>
+              </div>
+            </div>
+
+             <div class="filter-params">
+              <div class="filter-params__head">
+                <button class="btn btn-params" type="button" data-toggle="collapse" data-target="#filterCategory2" aria-expanded="true" aria-controls="collapseExample">
+                  Категории
+                </button>
+              </div>
+              <div class="filter-params__body collapse in" id="filterCategory2">
+                 <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                    </label>
+                  </div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+                  <div class="checkbox"><label>
+                      <input type="checkbox"> Подкатегория
+                  </label></div>
+              </div>
+            </div>
+          </aside>
+          
+          <div class="form-action form-action_justify">
+            <button type="submit" class="btn btn-red pull-right">Применить</button>
+            <button type="reset" class="btn btn-reset pull-left">Сбросить</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-9">
+        <div class="catalog-head">
+          <h1 class="category-title">Жидкость</h1>
+        </div>
+
+        <div class="catalog-nav-filter clearfix">
+          <ul class="pagination-goods navbar-right">
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li> -->
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+          </ul>
+          <form class="form-group navbar-right">
+            <select class="form-control">
+              <option value="0">Товаров на странице</option>
+              <option value="1">Товаров на странице</option>
+              <option value="2">Товаров на странице</option>
+              <option value="3">Товаров на странице</option>
+              <option value="4">Товаров на странице</option>
+              <option value="5">Товаров на странице</option>
+              <option value="6">Товаров на странице</option>
+            </select>
+          </form>
+          <form class="form-group navbar-left">
+            <select class="form-control">
+              <option value="0">Сортировка</option>
+              <option value="1">Сортировка</option>
+              <option value="2">Сортировка</option>
+              <option value="3">Сортировка</option>
+              <option value="4">Сортировка</option>
+              <option value="5">Сортировка</option>
+              <option value="6">Сортировка</option>
+            </select>
+          </form>
+        </div>
+       
+        
+        <aside class="catalog-result">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+      
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета </a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="goods-item">
+                <figure class="new-goods-slide__preview">
+                  <a href="#"><img src="img/goods/1.jpg" alt="Товар"></a>
+                  <div class="goods-slide__mask">
+                    <a href="#" class="goods-slide__mask-inner" data-toggle="modal" data-target="#quickOrderModal">
+                      <span class="icon-cart-preview"></span>
+                      <div class="mask-text"><span>В корзину</span></div>
+                    </a>
+                  </div>
+                </figure>
+
+                <div class="goods-slide__info">
+                  <h3 class="goods-slide__title"><a class="link_dark" href="#">Электронная сигарета <br>Joyetech eGo ONE</a></h3>
+                  <div class="rating-conteiner">
+                    <input type="text" class="rating-goods">
+                  </div>
+                  <div class="goods-slide__action">
+                    <div class="goods-slide__price">
+                      <span>1500 руб.</span>
+                    </div>
+
+                    <div class="goods-slide__btn">
+                      <a href="#" class="btn btn-buy">Купить</a>
+                    </div>
+                  </div><!-- /.goods-slide__action -->
+                </div><!-- /.goods-slide__info -->
+              </div><!-- /.goods-slide -->
+            </div><!-- /.col -->
+          </div>
+        </aside>
+
+        <div class="catalog-nav-filter clearfix">
+          <ul class="pagination-goods navbar-right">
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li> -->
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+          </ul>
+          <form class="form-group navbar-right">
+            <select class="form-control">
+              <option value="0">Товаров на странице</option>
+              <option value="1">Товаров на странице</option>
+              <option value="2">Товаров на странице</option>
+              <option value="3">Товаров на странице</option>
+              <option value="4">Товаров на странице</option>
+              <option value="5">Товаров на странице</option>
+              <option value="6">Товаров на странице</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+//=include partials/modal.html 
+//=include partials/footer.html  
