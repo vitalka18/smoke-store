@@ -43,6 +43,12 @@ p
 
 textarea 
   resize: vertical
+
+.reviews-form-wrap
+  h3
+    margin-bottom: 20px
+    font-size: 20px
+    color: #2f424f
 /***********************************************
  * HEADER
  ***********************************************/
@@ -233,6 +239,8 @@ textarea
 /***********************************************
  * FORM
  ***********************************************/
+.reviews-form
+  margin-bottom: 60px
 .capcha
   margin: 10px 0
 
@@ -455,6 +463,26 @@ label + .form-control
   padding: 25px 0 0
   font-size: 14px
 
+.last-review-item
+  margin-bottom: 35px
+  font-size: 14px
+  color: #000
+  border-bottom: 1px solid #878383
+  &:after
+    content: ''
+    display: block
+    margin-top: 35px
+  p 
+    margin-bottom: 15px
+.last-review-item__date
+  margin-bottom: 10px
+.last-review-item__name,
+.last-review-item h4
+  font-size: 16px
+  font-weight: bold
+  margin-bottom: 15px
+.last-review-item__answer
+  color: #a90525
 .tab__action
   margin-bottom: 30px
 
@@ -507,6 +535,7 @@ label + .form-control
     text-align: center
   a
     color: #000
+    font-weight: bold
     &:hover
       text-decoration: none
       color: #000
@@ -518,8 +547,9 @@ label + .form-control
   text-align: right
   p 
     color: #000
+    margin: 0
     & + p
-      margin-top: 5px
+      margin-top: 0px
 
 .map-header
   padding: 12px 30px

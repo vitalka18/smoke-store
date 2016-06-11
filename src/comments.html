@@ -10,60 +10,59 @@
   
   <div class="reviews-form-wrap">
     <h3>Задать вопрос и написать отзыв</h3>
-    <div class="reviews-form">
+    <form class="reviews-form">
       <div class="row">
         <div class="form-group col-md-4">
-          <label for="inputCommentsName">Имя</label>
+          <label for="inputCommentsName">Имя <span class="text-danger">*</span></label>
           <input type="email" class="form-control" id="inputCommentsName">
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col-md-4">
-          <label for="inputCommentsEmail">Email</label>
+          <label for="inputCommentsEmail">Email <span class="text-danger">*</span></label>
           <input type="text" class="form-control" id="inputCommentsEmail">
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col-md-8">
-          <label for="inputCommentsMessage">Комментарий</label>
+          <label for="inputCommentsMessage">Комментарий <span class="text-danger">*</span></label>
           <textarea name="inputCommentsMessage" id="inputCommentsMessage" rows="10" class="form-control"></textarea>
         </div>
       </div>
 
       <div class="form-action">
-        <button type="submit" class="btn btn-red">Отправить</button>
+        <button type="submit" class="btn btn-red-dark">Отправить</button>
         <button type="reset" class="btn btn-reset">Отменить</button>
       </div>
-    </div>
-
+    </form>
+    <h3>Отзывы покупателей</h3>
     <div class="last-review-wrap">
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object" src="..." alt="...">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading">Media heading</h4>
-          <div class="media-date"><time datetime="2016-03-21">21.03.16</time></div>
-          <form class="media-rating">
-            
-          </form>
-          
-          <h4 class="media-name">Название товара</h4>
+      <div class="last-review-item">
+        <div class="last-review-item__date"><time>21.03.16</time></div>
+        <h4 class="last-review-item__name">Имя пользователя</h4>
+        <p>Неплохо защищает корпус, черный чехол на черном евике выглядит красиво, плотно лежит в руке и не дает выпасть девайсу (только если не держать его вверх ногами).</p>
+        <h4 class="last-review-item__answer">Ответ</h4>
+        <p>Через некоторое время растянулся и начал сваливаться (лечится прогревом чехла на батарее и последующим его натягивании на девайс). Отсутствие крепления для ремешка. Силикон через месяц начал стираться и немного облезать на углах. Не критично, но подозреваю что через пару месяцев будет еще хуже.</p>
+      </div>
 
-          <div class="media-review media-review-positive">
-            <h5 class="media-review-title">Преимущества</h5>
-            <p>Неплохо защищает корпус, черный чехол на черном евике выглядит красиво, плотно лежит в руке и не дает выпасть девайсу (только если не держать его вверх ногами).</p>
-          </div>
+      <div class="last-review-item">
+        <div class="last-review-item__date"><time>21.03.16</time></div>
+        <h4 class="last-review-item__name">Имя пользователя</h4>
+        <p>Неплохо защищает корпус, черный чехол на черном евике выглядит красиво, плотно лежит в руке и не дает выпасть девайсу (только если не держать его вверх ногами).</p>
+        <h4 class="last-review-item__answer">Ответ</h4>
+        <p>Через некоторое время растянулся и начал сваливаться (лечится прогревом чехла на батарее и последующим его натягивании на девайс). Отсутствие крепления для ремешка. Силикон через месяц начал стираться и немного облезать на углах. Не критично, но подозреваю что через пару месяцев будет еще хуже.</p>
+      </div>
 
-          <div class="media-review media-review-unpositive">
-            <h5 class="media-review-title">Недостатки</h5>
-            <p>Через некоторое время растянулся и начал сваливаться (лечится прогревом чехла на батарее и последующим его натягивании на девайс). Отсутствие крепления для ремешка. Силикон через месяц начал стираться и немного облезать на углах. Не критично, но подозреваю что через пару месяцев будет еще хуже.</p>
-          </div>
-        </div>
+      <div class="clearfix">
+        <ul class="pagination-goods navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+          <li class=""><a href="#">1</a></li>
+          <li class="active"><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+        </ul>
       </div>
     </div>
   </div>
