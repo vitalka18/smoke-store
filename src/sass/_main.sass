@@ -20,6 +20,29 @@ p
 
 .modal-backdrop.in
   opacity: .85
+
+.text-danger
+  color: rgb(218, 32, 40)
+
+.text-success
+  color: rgb(3, 134, 37)
+.goods-page-title
+  margin: 45px 0 15px
+  font-size: 24px
+  color: #1e3443
+
+.good-name
+  margin: 0 0 25px
+  font-size: 24px
+  color: #2f424f
+
+.good-price
+  margin: 25px 0
+  font-size: 22px
+  color: #000
+
+textarea 
+  resize: vertical
 /***********************************************
  * HEADER
  ***********************************************/
@@ -113,9 +136,12 @@ p
   .btn
     border-color: $dark-base
     border-left: none
+
+
 /***********************************************
  * FOOTER
  ***********************************************/
+
 .footer
   padding: 0
   margin-top: 30px
@@ -207,6 +233,12 @@ p
 /***********************************************
  * FORM
  ***********************************************/
+.capcha
+  margin: 10px 0
+
+label + .form-control
+  margin-top: 4px
+
 .form-control
   height: 32px
   padding-top: 5px
@@ -324,7 +356,7 @@ p
     text-align: center
     transition: all .3s
 
-.catalog-nav-filter
+.catalog-nav-filter, .good-form
   margin: 20px 0
   .form-control
     padding-right: 30px
@@ -337,9 +369,6 @@ p
 .mb-30
   margin-bottom: 30px
 
-.btn-block-xs
-  display: block
-  width: 100%
 .max-width-160-xs
   max-width: 160px
   display: inline
@@ -382,6 +411,87 @@ p
 .sep-white
   border-top-color: 1px solid white
   margin: 50px 0
+
+.modal-action 
+  padding: 20px
+  &.btn-center
+    text-align: center
+    .btn
+      margin: 0 10px
+
+.good-form
+  margin: 0
+  .form-action
+    margin: 50px 0 0
+  .control-label
+    text-align: left
+    color: #000
+  .form-control
+    width: 100%
+    font-size: 14px
+  .form-action__left
+    padding: 0 5px
+    .control-label, .form-control
+      float: left
+    .control-label
+      width: 40px
+    .form-control
+      width: 60px
+      margin-top: 0   
+.form-action__right
+  float: right
+.form-action__left
+  float: left
+.form-action_row
+  margin-right: -5px
+  margin-left: -5px
+
+.form-group .control-label
+  text-align: left
+
+.review
+  border-top: 1px solid #000
+  margin: 25px 0 0
+  padding: 25px 0 0
+  font-size: 14px
+
+.tab__action
+  margin-bottom: 30px
+
+.tab-pane
+  .review-label
+    font-size: 16px
+    font-weight: bold
+    margin-bottom: 5px
+
+.dl-review
+  margin: 0 0 20px
+  color: #000
+  font-weight: 400
+  dt
+    text-align: left
+  dd
+    .rating-container
+      position: relative
+      top: -3px
+
+.dl-review_voice
+  color: #464545
+
+.rating-btn-wrap
+  display: inline-block
+  vertical-align: middle
+  margin-left: 10px
+  span
+    vertical-align: middle
+
+.rating-container .filled-stars
+  color: #ee222a
+  text-shadow: none
+
+.reviewModal
+  .rating-container
+    margin-top: 2px
 /***********************************************
  * panel
  ***********************************************/
@@ -585,6 +695,19 @@ p
         z-index: 101
         width: 10px
 
+.nav-tabs_card
+  margin-bottom: 1px
+  >li
+    margin-top: 0
+    a
+      padding: 8px 25px
+    &.active 
+      margin-top: 0
+      position: relative
+      >a, a:hover, a:focus
+        padding: 8px 25px
+      &:after
+        left: 20px
 .table-striped
   border: 1px solid #c1c1c1
   tfoot, tbody, thead
@@ -592,6 +715,11 @@ p
       th, td
         padding-left: 20px
         padding-right: 20px
+
+.tab-content_good
+  .first-td-fixed_200
+    td:first-child
+      width: 200px
 
 .table-striped>tbody>tr:nth-of-type(odd)  
   background: #f7f7f7
@@ -722,3 +850,11 @@ p
   margin-bottom: 30px
   color: #2f424f
   font-size: 24px
+
+.good-page-row
+  margin-bottom: 45px
+
+.row_between_15
+  margin: 0 -15px
+  [class*="col-"]
+    padding: 0 20px

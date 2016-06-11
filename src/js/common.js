@@ -96,6 +96,24 @@ $(document).ready(function() {
     ]
   });
 
+  $('.js-good-gallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.js-good-gallery-nav'
+  });
+
+  $('.js-good-gallery-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.js-good-gallery',
+    dots: false,
+    arrows: false,
+    focusOnSelect: true
+  });
+  
+
   
   $('.sub-menu a').hover(function() {
     var $that = $(this);

@@ -79,6 +79,10 @@
 .slick-prev:before, .slick-next:before
   display: none
 
+.goods-slider-container 
+  .slick-prev, .slick-next
+    top: 43%
+
 .slick-prev, .slick-next
   overflow: hidden
   width: 12px
@@ -116,6 +120,11 @@
   .goods-slider
     border-top: 1px solid $dark-base
 
+.not-available
+  img
+    opacity: .4
+  .text-danger
+    line-height: 34px
 .goods-slider
   position: relative
   &:after
@@ -156,9 +165,10 @@
 .goods-slide__mask-inner
   padding: 25px 0
   position: absolute
-  top: 50px
+  top: 0
   right: 0
   left: 0
+  bottom: 0
   margin: auto
   width: 120px
   height: 120px
@@ -213,3 +223,33 @@
   img 
     max-height: 214px
     margin: 0 auto
+
+.gallery-big
+  margin: 0 0 20px
+  border: 1px solid #a2a2a2
+  border-radius: 3px
+  text-align: center
+  img
+    margin: 0 auto
+
+.gallery-small-item
+  padding: 0 10px
+
+.gallery-small-outer
+  margin: 0 -10px
+
+.gallery-small-item__inner
+  position: relative
+  width: 100%
+  padding-bottom: 100%
+  border: 1px solid #a2a2a2
+  border-radius: 3px
+  img
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    max-width: 100%
+    max-height: 100%
+    margin: auto

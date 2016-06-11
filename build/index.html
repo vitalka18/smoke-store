@@ -161,7 +161,7 @@
               <li><a href="#">
                 <h4 class="sub-menu__title">Аккумуляторы</h4>
                 <div class="sub-menu__body">
-                  <div class="sub-menu__preview"  style="background-image: url(img/menu/category-img-5.png)"data-bg="url(img/menu/category-img-5.png)" data-hover-bg="url(img/menu/category-img-5-hover.png)">
+                  <div class="sub-menu__preview"  style="background-image: url(img/menu/category-img-5.png)" data-bg="url(img/menu/category-img-5.png)" data-hover-bg="url(img/menu/category-img-5-hover.png)">
                     
                   </div>
                   <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
@@ -819,9 +819,9 @@
 
           <div class="form-group">
 
-            <label for="">Комментарий</label>
+            <label for="inputComments">Комментарий</label>
 
-            <textarea name="" class="form-control" id="" rows="5"></textarea>
+            <textarea name="inputComments" class="form-control" id="inputComments" rows="5"></textarea>
 
           </div>
 
@@ -876,6 +876,100 @@
         © 2016 VapeShop Магазин Электронных сигарет
 
       </div> -->
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+
+
+<div class="modal fade" id="goodReviewModal3" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog  modal-md">
+
+    <div class="modal-content ">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Написать отзыв</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form class="reviewModal">
+
+          <div class="row row_between_15">
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Оцените продукт</label>
+
+                <input type="text" class="rating-goods" value="4">
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="reviewName">Имя</label>
+
+                <input type="text" class="form-control" id="reviewName">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewAdvantages">Преимущества</label>
+
+                <input type="text" class="form-control" id="reviewAdvantages">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewDisadvetages">Недостатки</label>
+
+                <input type="text" class="form-control" id="reviewDisadvetages">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label for="reviewText">Отзыв</label>
+
+                <textarea name="reviewText" id="reviewText" rows="9" class="form-control"></textarea>
+
+              </div>
+
+              <div class="form-action text-right">
+
+                <button type="submit" class="btn btn-red-dark">Отправить</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
 
     </div><!-- /.modal-content -->
 

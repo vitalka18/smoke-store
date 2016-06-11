@@ -1,0 +1,501 @@
+//=include partials/header.html  
+
+<div class="container">
+  <br>
+  <br>
+  <h1 class="text-center">Попапи</h1>
+  <br>
+  <br>
+  <div class="btn-group-vertical center-block" role="group" aria-label="...">
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#addedToCart">
+      Товар добавлен в корзину
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#review">
+      Написать отзыв
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#review2">
+      Написать отзыв 2
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#sayMe1">
+      Сообщите мне о поступлении товара
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#sayMe2">
+      Сообщите мне о поступлении товара 2
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#quickOrderModal">
+      Быстрый заказ 
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#quickOrderModal2">
+      Быстрый заказ 2
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#vacancy">
+      Вакансии
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#review2">
+      Спасибо за отзыв
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#subscribe">
+      Подписка оформлена 
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#callMe">
+      Заказать звонок 
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#callMe2">
+      Заказать звонок 2
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#enterModal">
+      Войти на сайт
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#recoveryPassword">
+      Восстановление пароля
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#recoveryPassword2">
+      Восстановление пароля 2
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#registrationModal">
+      регистрация
+    </button>
+
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#registrationModal2">
+      регистрация 2
+    </button>
+  </div>
+</div>
+
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Регистрация</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="registrationName">Имя</label>
+            <input type="text" class="form-control" id="registrationName">
+          </div>
+
+          <div class="form-group">
+            <label for="registrationEmail">Email</label>
+            <input type="email" class="form-control" id="registrationEmail">
+          </div>
+
+          <div class="form-group">
+            <label for="registrationPassword">Пароль</label>
+            <input type="password" class="form-control" id="registrationPassword">
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Подписаться на новости
+            </label>
+          </div>
+
+          <div class="form-action text-center">
+            <button type="submit" class="btn btn-red-dark">Зарегистрироваться</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="registrationModal2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Регистрация</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group has-error">
+            <label for="registrationName">Имя</label>
+            <input type="text" class="form-control" id="registrationName">
+            <p class="control-label error">введите имя</p>
+          </div>
+
+          <div class="form-group has-error">
+            <label for="registrationEmail">Email</label>
+            <input type="email" class="form-control" id="registrationEmail">
+            <p class="control-label error">введите email</p>
+          </div>
+
+          <div class="form-group has-error">
+            <label for="registrationPassword">Пароль</label>
+            <input type="password" class="form-control" id="registrationPassword">
+            <p class="control-label error">введите пароль</p>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Подписаться на новости
+            </label>
+          </div>
+
+          <div class="form-action text-center">
+            <button type="submit" class="btn btn-red-dark disabled" disabled>Зарегистрироваться</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="enterModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Вход</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="enterEmail">Email</label>
+            <input type="email" class="form-control" id="enterEmail">
+          </div>
+
+          <div class="form-group">
+            <label for="enterPassword">Пароль</label>
+            <input type="password" class="form-control" id="enterPassword">
+          </div>
+
+          <div class="form-action text-center">
+            <button type="submit" class="btn btn-red-dark">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="quickOrderModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Быстрый заказ</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputName" class="control-label">Имя</label>
+            <input type="email" class="form-control" id="inputName">
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail3" class="control-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail3" >
+          </div>
+
+          <div class="form-group">
+            <label for="telInput" class="control-label">Телефон</label>
+            <input type="tel" class="form-control" id="telInput">
+          </div>
+
+          <div class="form-group">
+            <label for="">Комментарий</label>
+            <textarea name="" class="form-control" id="" rows="5"></textarea>
+          </div>
+
+          <div class="form-action text-center">
+            <button type="submit" class="btn btn-red-dark">Заказать</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="addedToCart" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-md">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Товар добавлен в корзину</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Продолжить покупки</button>
+        <a href="#" class="btn btn-red-dark min-width_200">Оформить Заказ</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="review2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Спасибо за отзыв</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="review" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Написать отзыв</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="form-group">
+              <label for="registrationName">Оцените продукт</label>
+              <input type="text" class="rating-goods">
+            </div>
+            
+            <div class="form-group">
+              <label for="inputReviewName">Имя</label>
+              <input type="text" class="form-control" id="inputReviewName">
+            </div>
+
+            <div class="form-group">
+              <label for="inputReviewAdvatages">Преимущества</label>
+              <input type="text" class="form-control" id="inputReviewAdvatages">
+            </div>
+
+            <div class="form-group">
+              <label for="inputReviewDisadvatages">Недостатки</label>
+              <input type="text" class="form-control" id="inputReviewDisadvatages">
+            </div>
+
+            <div class="form-group">
+              <label for="inputReviewComment">Комментарий</label>
+              <textarea name="" class="form-control" id="inputReviewComment" rows="5"></textarea>
+            </div>
+
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-red-dark">Отправить отзыв</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="callMe" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Заказать звонок</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">          
+            <div class="form-group">
+              <label for="callInputName">Имя</label>
+              <input type="text" class="form-control" id="callInputName">
+            </div>
+
+            <div class="form-group">
+              <label for="callInputTel">Телефон</label>
+              <input type="tel" class="form-control" id="callInputTel">
+            </div>
+
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-red-dark">Перезвоните мне</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="callMe2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Заказать звонок</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">          
+            <div class="form-group has-error">
+              <label for="callInputName2">Имя</label>
+              <input type="text" class="form-control" id="callInputName">
+              <p class="control-label error">введите имя</p>
+            </div>
+
+            <div class="form-group has-error">
+              <label for="callInputTel2">Телефон</label>
+              <input type="tel" class="form-control" id="callInputTel">
+              <p class="control-label error">введите телефон</p>
+            </div>
+
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-red-dark disabled" disabled>Перезвоните мне</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="recoveryPassword" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Восстановление пароля</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">          
+            <div class="form-group">
+              <label for="recoveryPasswordEmail">Введите Ваш адрес електронной почты, на который мы вышлем Ваш пароль:</label>
+              <input type="email" class="form-control" id="recoveryPasswordEmail">
+            </div>
+
+            <div class="form-group">
+              <label for="recoveryPasswordEmail">Введите капчу</label>
+              <div class="capcha">
+                <img src="http://lorempixel.com/120/70/abstract" alt="capcha">
+              </div>
+              <input type="email" class="form-control" id="recoveryPasswordEmail">
+            </div>
+
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-red-dark">Восстановить пароль</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="recoveryPassword2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Новый пароль отправлен на указанный email</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="sayMe1" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Сообщите мне о поступлении товара</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="form-group">
+              <label for="inputcontactEmail">Email</label>
+              <input type="text" class="form-control" id="inputcontactEmail">
+            </div>
+
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-red-dark">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<div class="modal fade" id="sayMe2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Спасибо! <br> Мы сообщим!</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="quickOrderModal2" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Спасибо за заказ!</h3>
+      </div>
+      <div class="modal-body text-center">
+        <p>Номер вашего заказа №456584</p>
+        <p> В ближайшее время с Вами свяжется оператор для уточнения заказа.</p>
+        <div class="form-action">
+          <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="vacancy" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Спасибо! <br> Мы рассмотрим Ваше резюме!</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="subscribe" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Подписка оформлена</h3>
+      </div>
+      <div class="modal-action btn-center">
+        <button class="btn btn-red-dark min-width_200" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+//=include partials/footer.html  

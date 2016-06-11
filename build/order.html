@@ -161,7 +161,7 @@
               <li><a href="#">
                 <h4 class="sub-menu__title">Аккумуляторы</h4>
                 <div class="sub-menu__body">
-                  <div class="sub-menu__preview"  style="background-image: url(img/menu/category-img-5.png)"data-bg="url(img/menu/category-img-5.png)" data-hover-bg="url(img/menu/category-img-5-hover.png)">
+                  <div class="sub-menu__preview"  style="background-image: url(img/menu/category-img-5.png)" data-bg="url(img/menu/category-img-5.png)" data-hover-bg="url(img/menu/category-img-5-hover.png)">
                     
                   </div>
                   <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
@@ -258,34 +258,34 @@
               <div class="row form-horizontal">
                 <div class="col-md-5">
                   <div class="form-group">
-                    <label for="telInputName" class="control-label col-md-3 col-sm-3">Имя</label>
-                    <div class="col-md-9 col-sm-9"><input type="text" class="form-control" id="telInputName"></div>
+                    <label for="telInputName" class="control-label col-md-4 col-sm-4">Имя <span class="text-danger">*</span></label>
+                    <div class="col-md-8 col-sm-8"><input type="text" class="form-control" id="telInputName"></div>
                   </div>
 
                   <div class="form-group">
-                    <label for="telInput" class="control-label col-md-3 col-sm-3">Телефон</label>
-                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="telInput"></div>
+                    <label for="telInput2" class="control-label col-md-4 col-sm-4">Телефон <span class="text-danger">*</span></label>
+                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="telInput2"></div>
                   </div>
 
                   <div class="form-group">
-                    <label for="emailInput" class="control-label col-md-3 col-sm-3">Email</label>
-                     <div class="col-md-9 col-sm-9"><input type="email" class="form-control" id="emailInput"></div>
+                    <label for="emailInput" class="control-label col-md-4 col-sm-4">Email <span class="text-danger">*</span></label>
+                     <div class="col-md-8 col-sm-8"><input type="email" class="form-control" id="emailInput"></div>
                   </div>
                 </div>
                 <div class="col-md-5 col-md-offset-2">
                   <div class="form-group">
-                    <label for="region" class="control-label col-md-3 col-sm-3">Регион</label>
-                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="region"></div>
+                    <label for="region" class="control-label col-md-4 col-sm-4">Регион <span class="text-danger">*</span></label>
+                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="region"></div>
                   </div>
 
                   <div class="form-group">
-                    <label for="city" class="control-label col-md-3 col-sm-3">Город</label>
-                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="city"></div>
+                    <label for="city" class="control-label col-md-4 col-sm-4">Город <span class="text-danger">*</span></label>
+                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="city"></div>
                   </div>
 
                   <div class="form-group">
-                    <label for="address" class="control-label col-md-3 col-sm-3">Адрес</label>
-                     <div class="col-md-9 col-sm-9"><input type="tel" class="form-control" id="address"></div>
+                    <label for="address" class="control-label col-md-4 col-sm-4">Адрес <span class="text-danger">*</span></label>
+                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="address"></div>
                   </div>
                 </div>
               </div>
@@ -364,7 +364,7 @@
           </div>
           <div class="tab-pane" id="tab4">
             <div class="step__body">
-              <h4 class="step-title">Шаг 3: Выбор способа оплаты</h4>
+              <h4 class="step-title">Шаг 4: Подтверждение заказа</h4>
               <div class="table-responsive">
                 <table class="table table-cart">
                   <tr>
@@ -396,7 +396,7 @@
                   </div>
                 </div>
                 <div class="to-right">
-                  Итого <span class="value">9000 руб.</span>
+                  Итого с учетом доставки <span class="value">9000 руб.</span>
                 </div>
                 
               </div>
@@ -610,9 +610,9 @@
 
           <div class="form-group">
 
-            <label for="">Комментарий</label>
+            <label for="inputComments">Комментарий</label>
 
-            <textarea name="" class="form-control" id="" rows="5"></textarea>
+            <textarea name="inputComments" class="form-control" id="inputComments" rows="5"></textarea>
 
           </div>
 
@@ -667,6 +667,100 @@
         © 2016 VapeShop Магазин Электронных сигарет
 
       </div> -->
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+
+
+<div class="modal fade" id="goodReviewModal3" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog  modal-md">
+
+    <div class="modal-content ">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Написать отзыв</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form class="reviewModal">
+
+          <div class="row row_between_15">
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Оцените продукт</label>
+
+                <input type="text" class="rating-goods" value="4">
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="reviewName">Имя</label>
+
+                <input type="text" class="form-control" id="reviewName">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewAdvantages">Преимущества</label>
+
+                <input type="text" class="form-control" id="reviewAdvantages">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewDisadvetages">Недостатки</label>
+
+                <input type="text" class="form-control" id="reviewDisadvetages">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label for="reviewText">Отзыв</label>
+
+                <textarea name="reviewText" id="reviewText" rows="9" class="form-control"></textarea>
+
+              </div>
+
+              <div class="form-action text-right">
+
+                <button type="submit" class="btn btn-red-dark">Отправить</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
 
     </div><!-- /.modal-content -->
 

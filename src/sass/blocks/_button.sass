@@ -10,6 +10,9 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
   [class*="icon-"]
     vertical-align: middle
 
+.min-width_200
+  min-width: 200px
+
 .btn-success
   background: #49bb7b
 .btn-danger
@@ -143,3 +146,23 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
   text-align: center
   line-height: 26px
   color #393939
+
+.btn-voice
+  background: none
+  border: none
+  position: relative
+  transition: all .3s
+  span
+    transition: all .3s
+  &:hover, &:focus
+    opacity: .7
+    &:focus, &:active
+      .icon-review-ok
+        transform: translate(0, -2px)
+      .icon-review-not
+        transform: translate(0, 2px)
+
+.btn-voice_ok
+  top: -5px
+.btn-voice_not
+  top: 5px

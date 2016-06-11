@@ -35,7 +35,34 @@
   .cart-result
     padding-right: 0
     padding-left: 0
+  .nav-tabs_card
+    border-bottom: none
+    margin-bottom: 20px
+    >li
+      margin-top: 0px
+      display: block
+      float: none
+      box-shadow: none
+      border-bottom: 1px solid #a2a2a2
+      a
+        display: block
+        box-shadow: none
+      &.active 
+        >a, a:hover, a:focus
+          padding: 6px 25px
+
+        &:after
+          display: none
+  .gallery-small-outer
+    margin: 0
+  .good-name
+    margin-top: 25px
+  .control-label + [class*="col-"]
+    margin-top: 4px
 @media screen and (max-width: $break-phone)
+  .btn-block-xs
+    display: block
+    width: 100%
   .navbar-form-search
     float: left
     margin-top: 8px
@@ -293,6 +320,31 @@
       margin-top: 40px
       .btn:first-child
         margin-right: 10px
+  .good-form .form-action
+    margin-top: 0
+    .form-action__left
+      float: none
+      .control-label
+        float: none
+        display: block
+      .form-control
+        float: none
+        width: 100%
+    .form-action__right
+      float: none
+      text-align: center
+  .tab__action
+    margin-bottom: 10px
+  .review
+    margin-top: 10px
+    padding-top: 10px
+  .tab-page
+    .pagination-goods
+      float: none
+      text-align: center
+      margin-left: 0
+  .tab-pane
+    border-radius: 3px
 @media screen and (max-width: 440px)
   .step__nav ul li
     margin: 5px
