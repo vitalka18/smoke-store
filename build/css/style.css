@@ -535,6 +535,8 @@ label + .form-control { margin-top: 4px; }
 
 .modal-header { text-align: center; border-color: #383838; color: #383838; }
 
+.modal-body h5 { margin-bottom: 15px; font-weight: bold; font-size: 16px; color: #383838; }
+
 .modal-dialog-check { width: 100%; }
 
 .modal-check { color: #fff; text-align: center; }
@@ -659,6 +661,19 @@ label + .form-control { margin-top: 4px; }
 .table-history th { background: #f7f7f7; font-weight: normal; }
 .table-history th, .table-history td { padding: 10px 15px; text-align: center; border: 1px solid #c1c1c1; vertical-align: middle; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .table-history tr:hover { background: #f7f7f7; }
+
+.table-order-modal { margin-bottom: 15px; }
+.table-order-modal td { padding-top: 5px; padding-bottom: 5px; vertical-align: middle; }
+
+.table-order-modal__price { text-align: right; }
+
+.table-order-modal__count { width: 70px; padding-right: 10px; padding-left: 10px; }
+.table-order-modal__count .bootstrap-touchspin .input-group-btn-vertical > .btn { padding: 0; width: 9px; height: 9px; border: none; }
+.table-order-modal__count .bootstrap-touchspin .input-group-btn-vertical i { left: 0; top: 0; }
+.table-order-modal__count .bootstrap-touchspin .input-group-btn-vertical { padding-right: 5px; }
+.table-order-modal__count .spin-arrow { width: 30px; padding: 0 5px; height: 26px; line-height: 26px; border: none; text-align: center; }
+.table-order-modal__count .bootstrap-touchspin { width: 50px; border: 1px solid #797979; -webkit-border-radius: 3px; border-radius: 3px; }
+.table-order-modal__count .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up { margin-bottom: 4px; }
 
 .nav-tabs { border-bottom: none; }
 .nav-tabs > li { margin-top: 11px; }
@@ -861,6 +876,9 @@ label + .form-control { margin-top: 4px; }
  .store-address__list{ width: 100%; float: none; }
  .store-address__map{ position: static; height: 500px; }
  .address-block.address-block_active:after{ display: none; } }
+
+@media screen and (min-width: 768px){
+ .modal-sm{ width: 360px; } }
 
 @media screen and (max-width: 767px){
  .store-address__map{ position: static; height: 300px; }

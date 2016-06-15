@@ -179,6 +179,10 @@ $(document).ready(function() {
     verticaldownclass: 'glyphicon glyphicon-minus'
   });
 
+  $('.js-spin-arrow').TouchSpin({
+    verticalbuttons: true
+  });
+
   $('#orderForm .step-form__inner').bootstrapWizard({
     'nextSelector': '.btn-next', 
     'previousSelector': '.btn-prev', 

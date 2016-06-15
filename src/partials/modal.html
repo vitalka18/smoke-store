@@ -103,6 +103,62 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="quickOrderModal2" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Быстрый заказ</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="inputName" class="control-label">Имя</label>
+            <input type="email" class="form-control" id="inputName">
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail3" class="control-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail3" >
+          </div>
+
+          <div class="form-group">
+            <label for="telInput" class="control-label">Телефон</label>
+            <input type="tel" class="form-control" id="telInput">
+          </div>
+
+          <div class="form-group">
+            <label for="inputComments">Комментарий</label>
+            <textarea name="inputComments" class="form-control" id="inputComments" rows="5"></textarea>
+          </div>
+          <h5>Товары в корзине</h5>
+
+          <table class="table-order-modal">
+            <tr>
+              <td class="table-order-modal__name">Длинное название товара </td>
+              <td class="table-order-modal__count">
+                <input type="text" class="form-control spin-arrow js-spin-arrow" value="3">
+              </td>
+              <td class="table-order-modal__price">1500 руб.</td>
+            </tr>
+            <tr>
+              <td class="table-order-modal__name">Длинное название товара </td>
+              <td class="table-order-modal__count">
+                <input type="text" class="form-control spin-arrow js-spin-arrow" value="3">
+              </td>
+              <td class="table-order-modal__price">1500 руб.</td>
+            </tr>
+          </table>
+
+          <div class="form-action text-center">
+            <button type="submit" class="btn btn-red-dark">Заказать</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <div class="modal fade" id="ageCheck" tabindex="-1" role="dialog">
   <div class="modal-dialog-check">
     <div class="modal-check">
