@@ -189,7 +189,7 @@ $(document).ready(function() {
     }
 
   });
-  if ( $('.mapFrame') ) {
+  if ( $('.mapFrame').length ) {
     var $map = $('#map-canvas');
     var longVal,latVal,zoomVal,contenteBlock,titleVal;
     longVal = $map.attr('data-long');
@@ -205,26 +205,19 @@ $(document).ready(function() {
 
       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-      var contentString = contenteBlock;
-
-      var infowindow = new google.maps.InfoWindow({
-          content: contentString,
-          maxWidth: 400
-      });
+      
       var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
           title: titleVal,
       });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map,marker);
-      });
+      
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
   }
 
-  if ( $('.store-address__map') ) {
+  if ( $('.store-address__map').length ) {
     $mapAddress = $('#addressMap');
     var longVal,latVal,zoomVal,contenteBlock,titleVal;
     longVal = $mapAddress.attr('data-long');
