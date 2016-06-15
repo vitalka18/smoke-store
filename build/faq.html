@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/range-slider/css/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-star-rating-master/css/star-rating.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-touchspin-master/dist/jquery.bootstrap-touchspin.min.css">
+  <link rel="stylesheet" media="all" href="css/style.css" >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  <header class="header">
+    <div class="header__top">
+      <div class="container clearfix">
+        <ul class="list-menu">
+          <li class="list-menu__item">
+            <a class="list-menu__link" href="#">О магазине</a>
+          </li>
+          <li class="list-menu__item">
+            <a class="list-menu__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="list-menu__item">
+            <a class="list-menu__link" href="#">FAQ</a>
+          </li>
+          <li class="list-menu__item">
+            <a class="list-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="list-social">
+          <li class="list-social__item"><a class="list-social__link" href="#"><span class="icon-fb-hd"></span></a></li>
+          <li class="list-social__item"><a class="list-social__link" href="#"><span class="icon-vk-hd"></span></a></li>
+          <li class="list-social__item"><a class="list-social__link" href="#"><span class="icon-yt-hd"></span></a></li>
+          <li class="list-social__item"><a class="list-social__link" href="#"><span class="icon-in-hd"></span></a></li>
+          <li class="list-social__item"><a class="list-social__link" href="#"><span class="icon-tw-hd"></span></a></li>
+        </ul>
+      </div>
+    </div><!-- /.header__top -->
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 navbar-header">
+            <a href="#" class="navbar-brand">
+              <img src="img/logo.png" alt="Главная">
+            </a>
+          </div><!-- /.col-md-3 -->
+
+          <div class="col-md-6 col-sm-5 header__bottom-center">
+            <div class="header__number">
+              <a href="tel:88007008453">8 (800) 700-84-53</a>
+            </div>
+            <a class="callback" href="#"><span class="icon-tel"></span> <span class="text">Заказать обратный звонок</span></a>
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-3 col-sm-4">
+            <div class="header__action">
+              <ul class="list-action">
+                <li class="list-action__item">
+                  <a class="list-action__link" href="#" data-toggle="modal" data-target="#enterModal"><span class="icon-enter"></span>Вход</a>
+                </li>
+                <li class="list-action__item">
+                  <a class="list-action__link" href="#" data-toggle="modal" data-target="#registrationModal">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__cart">
+                <a href="#" class="cart-link">
+                  <span class="icon-cart"></span>Корзина <span class="count">(10)</span>
+                </a>
+            </div><!-- /.header__cart -->
+          </div><!-- /.col-md-3 -->
+        </div>
+      </div>
+    </div><!-- /.header__bottom -->
+  </header>
+
+<nav class="navbar navbar-white">
+  <div class="container">
+    <div class="visible-xs menu-xs clearfix">
+      <form class="navbar-form navbar-form-search navbar-left visible-xs" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Название товара">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><span class="icon-search"></span></button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainMenu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div> 
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <form class="navbar-form navbar-form-search navbar-right hidden-xs" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Название товара">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><span class="icon-search"></span></button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+
+      <ul class="nav-main navbar-left">
+        <li class="nav-main__item">
+          <a class="nav-main__link has-sub" href="#">Раздел 1 
+            <span class="touch-open js-open-menu"><span class="glyphicon glyphicon-plus"></span></span>
+          </a>
+          <div class="nav-main__sub-menu">
+            <ul class="sub-menu">
+              <li><a href="#">
+                <h4 class="sub-menu__title">Клиромайзеры</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-1.png)" data-bg="url(img/menu/category-img-1.png)" data-hover-bg="url(img/menu/category-img-1-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+              <li><a href="#">
+                <h4 class="sub-menu__title">Проволока</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-2.png)" data-bg="url(img/menu/category-img-2.png)" data-hover-bg="url(img/menu/category-img-2-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Корпуса, мундштуки</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-3.png)" data-bg="url(img/menu/category-img-3.png)" data-hover-bg="url(img/menu/category-img-3-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Сменные испарители</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-4.png)" data-bg="url(img/menu/category-img-4.png)" data-hover-bg="url(img/menu/category-img-4-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Аккумуляторы</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview"  style="background-image: url(img/menu/category-img-5.png)" data-bg="url(img/menu/category-img-5.png)" data-hover-bg="url(img/menu/category-img-5-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Картриджи</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-6.png)" data-bg="url(img/menu/category-img-6.png)" data-hover-bg="url(img/menu/category-img-6-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Атомайзеры</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-7.png)" data-bg="url(img/menu/category-img-7.png)" data-hover-bg="url(img/menu/category-img-7-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Зарядные устройства</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-8.png)" data-bg="url(img/menu/category-img-8.png)" data-hover-bg="url(img/menu/category-img-8-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+
+              <li><a href="#">
+                <h4 class="sub-menu__title">Дрипки</h4>
+                <div class="sub-menu__body">
+                  <div class="sub-menu__preview" style="background-image: url(img/menu/category-img-1.png)" data-bg="url(img/menu/category-img-9.png)" data-hover-bg="url(img/menu/category-img-9-hover.png)">
+                    
+                  </div>
+                  <div class="sub-menu__text">Вместо привычных металлических стенок в этом случае используется колба из закаленного стекла или прозрачного пластика.</div>
+                </div>
+              </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-main__item">
+          <a class="nav-main__link" href="#">Раздел 2</a>
+        </li>
+        <li class="nav-main__item">
+          <a class="nav-main__link" href="#">Раздел 3</a>
+        </li>
+        <li class="nav-main__item">
+          <a class="nav-main__link" href="#">Раздел 4</a>
+        </li>
+        <li class="nav-main__item">
+          <a class="nav-main__link" href="#">Новинки</a>
+        </li>
+        <li class="nav-main__item">
+          <a class="nav-main__link" href="#">Акции</a>
+        </li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="#">Главная</a></li>
+    <li class="active">FAQ</li>
+  </ol>
+
+  <h1 class="page-title">Часто задаваемые вопросы</h1>
+  
+  <div class="row">
+    <div class="col-md-9">
+      <div class="faq">
+        <div class="faq-item">
+          <a class="faq-item__trigger" data-toggle="collapse" role="button" href="#faq1" aria-expanded="false" aria-controls="faq1">
+            Вопрос вопросов с вопросом?
+          </a>
+          <div class="collapse js-faq-collapse faq-item__collapse" id="faq1">
+            Vape Lab открыл двери своего второго магазина, на территории завода Арма. 
+            25 марта собрались наши друзья, постоянные гости и блогеры — была крутая, атмосферная вечеринка, для почитателей vape-культуры. Все кричали: «VAPE LAB, VAPE LAB!!!» Креативное место, для креативных людей. Завершающим штрихом был вкуснейший торт в нашей фирменной символике. 
+          </div>
+        </div><!-- /.faq-item -->
+
+        <div class="faq-item">
+          <a class="faq-item__trigger" data-toggle="collapse" role="button" href="#faq2" aria-expanded="false" aria-controls="faq2">
+            Вопрос вопросов с вопросом?
+          </a>
+          <div class="collapse js-faq-collapse faq-item__collapse" id="faq2">
+            Vape Lab открыл двери своего второго магазина, на территории завода Арма. 
+            25 марта собрались наши друзья, постоянные гости и блогеры — была крутая, атмосферная вечеринка, для почитателей vape-культуры. Все кричали: «VAPE LAB, VAPE LAB!!!» Креативное место, для креативных людей. Завершающим штрихом был вкуснейший торт в нашей фирменной символике. 
+          </div>
+        </div><!-- /.faq-item -->
+
+        <div class="faq-item">
+          <a class="faq-item__trigger" data-toggle="collapse" role="button" href="#faq3" aria-expanded="false" aria-controls="faq3">
+            Вопрос вопросов с вопросом?
+          </a>
+          <div class="collapse js-faq-collapse faq-item__collapse" id="faq3">
+            Vape Lab открыл двери своего второго магазина, на территории завода Арма. 
+            25 марта собрались наши друзья, постоянные гости и блогеры — была крутая, атмосферная вечеринка, для почитателей vape-культуры. Все кричали: «VAPE LAB, VAPE LAB!!!» Креативное место, для креативных людей. Завершающим штрихом был вкуснейший торт в нашей фирменной символике. 
+          </div>
+        </div><!-- /.faq-item -->
+
+        <div class="faq-item">
+          <a class="faq-item__trigger" data-toggle="collapse" role="button" href="#faq4" aria-expanded="false" aria-controls="faq4">
+            Вопрос вопросов с вопросом?
+          </a>
+          <div class="collapse js-faq-collapse faq-item__collapse" id="faq4">
+            Vape Lab открыл двери своего второго магазина, на территории завода Арма. 
+            25 марта собрались наши друзья, постоянные гости и блогеры — была крутая, атмосферная вечеринка, для почитателей vape-культуры. Все кричали: «VAPE LAB, VAPE LAB!!!» Креативное место, для креативных людей. Завершающим штрихом был вкуснейший торт в нашей фирменной символике. 
+          </div>
+        </div><!-- /.faq-item -->
+
+        <div class="faq-item">
+          <a class="faq-item__trigger" data-toggle="collapse" role="button" href="#faq5" aria-expanded="false" aria-controls="faq5">
+            Вопрос вопросов с вопросом?
+          </a>
+          <div class="collapse js-faq-collapse faq-item__collapse" id="faq5">
+            Vape Lab открыл двери своего второго магазина, на территории завода Арма. 
+            25 марта собрались наши друзья, постоянные гости и блогеры — была крутая, атмосферная вечеринка, для почитателей vape-культуры. Все кричали: «VAPE LAB, VAPE LAB!!!» Креативное место, для креативных людей. Завершающим штрихом был вкуснейший торт в нашей фирменной символике. 
+          </div>
+        </div><!-- /.faq-item -->
+      </div><!-- /.faq -->
+    </div>
+  </div>
+  
+  
+</div>
+
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog  modal-sm">
+
+    <div class="modal-content ">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Регистрация</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+
+            <label for="registrationName">Имя</label>
+
+            <input type="text" class="form-control" id="registrationName">
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="registrationEmail">Email</label>
+
+            <input type="email" class="form-control" id="registrationEmail">
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="registrationPassword">Пароль</label>
+
+            <input type="password" class="form-control" id="registrationPassword">
+
+          </div>
+
+
+
+          <div class="checkbox">
+
+            <label>
+
+              <input type="checkbox"> Подписаться на новости
+
+            </label>
+
+          </div>
+
+
+
+          <div class="form-action text-center">
+
+            <button type="submit" class="btn btn-red-dark">Зарегистрироваться</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="enterModal" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog modal-sm">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Вход</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+
+            <label for="enterEmail">Email</label>
+
+            <input type="email" class="form-control" id="enterEmail">
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="enterPassword">Пароль</label>
+
+            <input type="password" class="form-control" id="enterPassword">
+
+          </div>
+
+
+
+          <div class="form-action text-center">
+
+            <button type="submit" class="btn btn-red-dark">Войти</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="quickOrderModal" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog modal-sm">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Быстрый заказ</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+
+            <label for="inputName" class="control-label">Имя</label>
+
+            <input type="email" class="form-control" id="inputName">
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="inputEmail3" class="control-label">Email</label>
+
+            <input type="email" class="form-control" id="inputEmail3" >
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="telInput" class="control-label">Телефон</label>
+
+            <input type="tel" class="form-control" id="telInput">
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="inputComments">Комментарий</label>
+
+            <textarea name="inputComments" class="form-control" id="inputComments" rows="5"></textarea>
+
+          </div>
+
+
+
+          <div class="form-action text-center">
+
+            <button type="submit" class="btn btn-red-dark">Заказать</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="ageCheck" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog-check">
+
+    <div class="modal-check">
+
+      <div class="modal-check-logo">
+
+        <img src="img/big-logo.png" alt="VapeShop">
+
+      </div>
+
+      <hr class="sep-white">
+
+      <p>Вам уже исполнилось 18 лет?</p>
+
+      <div class="modal-check-action">
+
+        <button class="btn btn-success" data-dismiss="modal" aria-label="Close">Да</button>
+
+        <button class="btn btn-danger">Нет</button>
+
+      </div>
+
+      <hr class="sep-white">
+
+     <!--  <div class="copy">
+
+        © 2016 VapeShop Магазин Электронных сигарет
+
+      </div> -->
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+
+
+
+
+
+<div class="modal fade" id="goodReviewModal3" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog  modal-md">
+
+    <div class="modal-content ">
+
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h4 class="modal-title">Написать отзыв</h4>
+
+      </div>
+
+      <div class="modal-body">
+
+        <form class="reviewModal">
+
+          <div class="row row_between_15">
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Оцените продукт</label>
+
+                <input type="text" class="rating-goods" value="4">
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="reviewName">Имя</label>
+
+                <input type="text" class="form-control" id="reviewName">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewAdvantages">Преимущества</label>
+
+                <input type="text" class="form-control" id="reviewAdvantages">
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <label for="reviewDisadvetages">Недостатки</label>
+
+                <input type="text" class="form-control" id="reviewDisadvetages">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label for="reviewText">Отзыв</label>
+
+                <textarea name="reviewText" id="reviewText" rows="9" class="form-control"></textarea>
+
+              </div>
+
+              <div class="form-action text-right">
+
+                <button type="submit" class="btn btn-red-dark">Отправить</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div><!-- /.modal-content -->
+
+  </div><!-- /.modal-dialog -->
+
+</div><!-- /.modal -->
+  <div class="footer">
+    <div class="footer-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 border-right">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="foot-nav">
+                  <h3 class="title">VapeShop</h3>
+                  <ul class="vertical-list">
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link"> О магазине</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Новости</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Блог</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Вакансии</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Контакты</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Отзывы</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Карта сайта</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="foot-nav">
+                  <h3 class="title">Покупателям</h3>
+                  <ul class="vertical-list">
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Каталог</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link"> Как заказать</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Доставка и оплата</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Акции</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Бонусная программа</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Адреса магазинов</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">Гарантии/возврат</a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">FAQ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="foot-nav">
+                  <h3 class="title">Мы в соцсетях</h3>
+                  <ul class="vertical-list">
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">
+                        <span class="icon-round"><span class="icon-vk-ft"></span></span>
+                        Вконтакте
+                       </a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">
+                        <span class="icon-round"><span class="icon-fb-ft"></span></span>
+                        Facebook
+                      </a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">
+                        <span class="icon-round"><span class="icon-in-ft"></span></span>
+                        Instagram
+                      </a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">
+                        <span class="icon-round"><span class="icon-yb-ft"></span></span>
+                        Youtube
+                      </a>
+                    </li>
+                    <li class="vertical-list__item">
+                      <a href="#" class="vertical-list__link">
+                        <span class="icon-round"><span class="icon-tw-ft"></span></span>
+                        Twitter
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="footer__contact">
+              <div class="footer__contact-act">
+                <a class="footer__tel" href="tel:88007008453">8 800 700-84-53</a>
+              </div>
+              <div class="footer__contact-act">
+                <a class="footer__email" href="mailto:info@vapeshop.ru">info@vapeshop.ru</a>  
+              </div>
+
+              <div class="footer__contact-form">
+                <form class="form-subscribe">
+                  <h3 class="form-title">Подписаться на рассылку</h3>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Введите email">
+                  </div>
+                  <div class="form-action text-center">
+                    <button type="submit" class="btn btn-red btn-big">Подписаться</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright text-center">
+      <div class="container">
+        <p class="copyright__text">
+          <a href="" class="copyright__logo icon-small-logo"></a>&copy; 2016 VapeShop Магазин Электронных сигарет
+        </p>
+        <p class="copyright__created">Сайт разработан компанией WBSpro <span class="icon-created"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END out-->
+</body>
+</html>

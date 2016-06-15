@@ -59,7 +59,19 @@
     margin-top: 25px
   .control-label + [class*="col-"]
     margin-top: 4px
+  .store-address__list
+    width: 100%
+    float: none
+  .store-address__map
+    position: static
+    height: 500px
+  .address-block.address-block_active
+    &:after
+      display: none
 @media screen and (max-width: $break-phone)
+  .store-address__map
+    position: static
+    height: 300px
   .btn-block-xs
     display: block
     width: 100%
@@ -338,7 +350,7 @@
   .review
     margin-top: 10px
     padding-top: 10px
-  .tab-page
+  .tab-page, .xs-pagination-center
     .pagination-goods
       float: none
       text-align: center
@@ -349,6 +361,38 @@
     .pagination-goods
       margin-left: 0
       text-align: center
+  .blog-item
+    margin-bottom: 20px
+  .blog-item__img
+    height: auto
+    img
+      height: auto
+  .blog-item__text
+    height: auto
+  .news-item__preview
+    display: none
+  .news-item__content
+    margin-left: 0
+  .news-item__text
+    margin-bottom: 25px
+  .blog-page-list__item
+    margin-bottom: 10px
+  .article-action
+    text-align: center
+  .action-right 
+    float: none
+    margin-top: 30px
+    display: block
+    text-align: center
+  .share__title
+    display: block
+    font-size: 18px
+    margin-bottom: 10px
+  .tag
+    text-align: center
+    .icon-tag
+      display: block
+      margin: 0 auto
 @media screen and (max-width: 440px)
   .step__nav ul li
     margin: 5px

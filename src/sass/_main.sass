@@ -4,11 +4,16 @@
 .goods-title
   margin: 4px 0 25px
 
-.page-title
+.page-title, .article-title
   margin: 0 0 20px
   color: #2f424f
   font-size: 24px
 
+.article-title
+  margin-bottom: 8px
+
+.article-time
+  margin-bottom: 25px
 .rating-xs
   font-size: 20px
 
@@ -49,6 +54,24 @@ textarea
     margin-bottom: 20px
     font-size: 20px
     color: #2f424f
+
+.news-item__title
+  margin: 0 0 25px
+  font-size: 20px
+  color: #a90525
+  a
+    color: #a90525
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+.text-page
+  img
+    max-width: 100%
+    height: auto
+ol
+  padding-left: 18px
+  margin: 8px 0
+
 /***********************************************
  * HEADER
  ***********************************************/
@@ -446,7 +469,8 @@ label + .form-control
     .form-control
       width: 60px
       margin-top: 0   
-.form-action__right
+.form-action__right,
+.action-right
   float: right
 .form-action__left
   float: left
@@ -763,6 +787,10 @@ label + .form-control
   h4
     margin: 0 0 20px
     font-size: 18px
+    a 
+      color: #000
+      &:hover
+        text-decoration: underline
 
   h5
     font-weight: bold
@@ -888,3 +916,329 @@ label + .form-control
   margin: 0 -15px
   [class*="col-"]
     padding: 0 20px
+
+.blog-item
+  margin-bottom: 10px
+  padding: 10px 12px
+  border: 1px solid #7d756b
+  border-radius: 3px
+  color: #000
+  font-size: 14px
+
+.blog-item__img
+  margin-bottom: 8px
+  height: 108px
+  overflow: hidden
+  img
+    width: 100%
+    height: 108px
+    transition: all 18s
+  &:hover img
+    opacity: .7
+    transform: scale(2)
+.blog-item__time
+  margin-bottom: 12px
+.blog-item__title
+  margin-bottom: 12px
+  font-size: 16px
+  a
+    color: #000
+    font-weight: 700
+    text-decoration: none
+    &:hover
+      color: #000
+      text-decoration: underline
+.blog-item__text
+  margin-bottom: 35px
+  padding: 0 
+  height: 76px
+  overflow: hidden
+  p
+    margin-bottom: 0
+.blog-item__action
+  margin-bottom: 20px
+.blog-item__tag
+  text-align: center
+  font-size: 12px
+.tag 
+  .icon-tag
+    vertical-align: middle
+
+.tag__link
+  display: inline-block
+  margin-left: 5px
+  text-decoration: none
+  color: #2f424f
+  &:hover
+    color: #2f424f
+    text-decoration: underline
+
+.article-action
+  margin-top: 35px
+  margin-bottom: 30px
+
+.blog-page-list
+  margin-top: 30px 
+  margin-bottom: 35px
+
+.blog-page-list__item
+  position: relative
+  display: block
+  padding-bottom: 100%
+
+.blog-page-list__item-inner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    transition: opacity .3s
+    &:hover
+      opacity: .7
+
+.share__title
+  margin-right: 15px
+  display: inline-block
+  vertical-align: middle
+
+.share__link
+  display: inline-block
+  height: 33px
+  width: 33px
+  border-radius: 50%
+  overflow: hidden
+  vertical-align: middle
+  transition: opacity .3s
+  &:hover
+    opacity: .7
+
+.news-item
+  +clr
+  padding: 0 0 30px
+  margin-bottom: 30px
+  border-bottom: 1px solid #46423c  
+  &:last-child
+    border-bottom: none
+    padding-bottom: 0
+
+.news-item__preview
+  float: left
+  width: 240px
+.news-item__content
+  margin-left: 310px
+.news-item__text
+  margin-bottom: 40px
+  color: #000
+  p
+    margin-bottom: 0px
+
+.news-item__time
+  margin-top: 10px
+
+.news-item__expiration-date
+  margin-bottom: 15px
+  color: #000
+
+.faq-item
+  position: relative
+  border: 2px solid #a90525
+  border-radius: 3px
+  margin-bottom: 60px
+  transition: border-color .3s
+  &:after,
+  &:before
+    position: absolute
+    left: 35px
+    content: ''
+    display: block
+    transition: border-color .3s
+  &:after
+    bottom: -27px
+    width: 0
+    height: 0
+    border-left: 30px solid transparent
+    border-right: 30px solid transparent
+    border-top: 30px solid #fff
+  &:before
+    bottom: -30px
+    width: 0
+    height: 0
+    border-left: 30px solid transparent
+    border-right: 30px solid transparent
+    border-top: 30px solid #a90525
+.faq-item__open
+  border-color: #c1c1c1
+  &:before
+    border-top-color: #c1c1c1
+.faq-item__trigger
+  display: block
+  padding: 15px 25px 20px
+  font-size: 20px
+  text-decoration: underline 
+  color: #a90525
+  &[aria-expanded="true"],
+  &:focus,
+  &:active
+    color: #a90525
+  &:hover
+    text-decoration: none 
+    color: #a90525
+
+.faq-item__collapse
+  padding: 0 25px 0px
+  color: #000
+  &:after
+    content: ''
+    display: block
+    height: 30px
+
+.vacancy-item
+  border: 2px solid #a90525
+  border-radius: 6px
+  margin-bottom: 15px
+  transition: border-color .3s
+  &.vacancy-item__open
+    border-color: #c1c1c1
+    .vacancy-item__trigger
+      color: #a90525
+      background: #fff
+.vacancy-item__trigger
+  position: relative
+  display: block
+  padding: 14px 90px 18px 25px
+  border-radius: 3px
+  background: #a90525
+  font-size: 20px
+  text-decoration: none 
+  color: #fff
+  transition: color .3s, background .3s, opacity .3s
+  &:after
+    position: absolute
+    display: block
+    content: ''
+    right: 30px
+    top: 0
+    bottom: 0
+    margin: auto 0
+    width: 0
+    height: 0
+    border-left: 15px solid transparent
+    border-right: 15px solid transparent
+    border-top: 15px solid #fff
+  &[aria-expanded="true"],
+  &:focus,
+  &:active,
+  &:hover
+    text-decoration: none 
+    color: #fff
+  &:hover
+    opacity: .85
+
+.vacancy-item__collapse
+  padding: 0 25px 0px
+  color: #000
+  &:after
+    content: ''
+    display: block
+    height: 45px
+  h4
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 8px
+  p
+    margin-bottom: 8px
+  a:not(.btn)
+    color: #000
+    text-decoration: none
+    &:hover,
+    &:focus
+      text-decoration: underline
+      color: #000
+
+.vacancy-item__contact
+  margin-bottom: 50px
+
+.vacancy-send__label
+  position: relative
+  display: block
+  text-align: center
+  font-size: 18px
+  margin-bottom: 60px
+  &:after,
+  &:before
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    content: ''
+    display: block
+    transition: border-color .3s
+  &:after
+    bottom: -35px
+    width: 0
+    height: 0
+    border-left: 19px solid transparent
+    border-right: 19px solid transparent
+    border-top: 19px solid #fff
+  &:before
+    bottom: -40px
+    width: 0
+    height: 0
+    border-left: 27px solid transparent
+    border-right: 27px solid transparent
+    border-top: 27px solid #c1c1c1
+.vacancy-send
+  .btn
+    font-size: 15px
+
+#addressMap
+  height: 100%
+  min-height: 100%
+  width: 100%
+
+.address-block
+  margin-bottom: -1px
+  padding: 12px 8px
+  border: 2px solid #c1c1c1
+  border-radius: 3px
+  color: #000
+  cursor: pointer
+  transition: border-color .3s
+  &:hover,
+  &.address-block_active
+    position: relative
+    z-index: 2
+    border-color: #a90525
+  &.address-block_active
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 12px
+      right: -16px
+      width: 0
+      height: 0
+      border-bottom: 15px solid transparent
+      border-top: 15px solid transparent
+      border-left: 15px solid #a90525
+
+.store-address
+  +clr
+  position: relative
+  min-height: 310px
+
+.store-address__list
+  float: left
+  width: 430px
+
+.store-address__map
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  left: 430px
+  width: auto

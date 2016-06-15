@@ -1,15 +1,23 @@
+var $mapAddress, mapAddress, markerAddress;
+
 $(document).ready(function() {
   setEqualHeight( $('.goods-item .goods-slide__title') );
   setEqualHeight( $('.goods-container__new .goods-slide__title') );
   setEqualHeight( $('.goods-slider-container_popular .goods-slide__title') );
+  setEqualHeight( $('.blog-wrap .blog-item__title') );
+  setEqualHeight( $('.blog-wrap .blog-item') );
 
   $(window).resize(function() {
     $('.goods-item .goods-slide__title').css('height', 'auto');
     $('.goods-container__new .goods-slide__title').css('height', 'auto');
-   $('.goods-slider-container_popular .goods-slide__title').css('height', 'auto');
+    $('.goods-slider-container_popular .goods-slide__title').css('height', 'auto');
+    $('.blog-wrap .blog-item__title').css('height', 'auto');
+    $('.blog-wrap .blog-item').css('height', 'auto');
     setEqualHeight( $('.goods-item .goods-slide__title') );
     setEqualHeight( $('.goods-container__new .goods-slide__title') );
     setEqualHeight( $('.goods-slider-container_popular .goods-slide__title') );
+    setEqualHeight( $('.blog-wrap .blog-item__title') );
+    setEqualHeight( $('.blog-wrap .blog-item') );
   });
 
 	$('.js-main-slider').slick({
@@ -188,7 +196,6 @@ $(document).ready(function() {
     latVal = $map.attr('data-lidt');
     zoomVal = $map.attr('data-zoom')*1;
     titleVal = $map.attr('data-title');
-    contenteBlock = $('#content-map').html();
     function initialize() {
       var myLatlng = new google.maps.LatLng(longVal,latVal);
       var mapOptions = {
@@ -204,7 +211,6 @@ $(document).ready(function() {
           content: contentString,
           maxWidth: 400
       });
-      var image = '/images/map-marker-hi.png';
       var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
@@ -218,6 +224,67 @@ $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', initialize);
   }
 
+  if ( $('.store-address__map') ) {
+    $mapAddress = $('#addressMap');
+    var longVal,latVal,zoomVal,contenteBlock,titleVal;
+    longVal = $mapAddress.attr('data-long');
+    latVal = $mapAddress.attr('data-lidt');
+    zoomVal = $mapAddress.attr('data-zoom')*1;
+    titleVal = $mapAddress.attr('data-title');
+    function initializeAddress() {
+      var myLatlng = new google.maps.LatLng(longVal,latVal);
+      var mapOptions = {
+        zoom: zoomVal,
+        center: myLatlng
+      };
+
+      mapAddress = new google.maps.Map(document.getElementById('addressMap'), mapOptions);
+      markerAddress = new google.maps.Marker({
+          position: myLatlng,
+          map: mapAddress,
+          title: titleVal,
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initializeAddress);
+  }
+
+  $('.js-change-map-state').click(function(event) {
+    var $that = $(this);
+    $('.address-block').removeClass('address-block_active');
+    $that.addClass('address-block_active');
+    var longVal,latVal,zoomVal,contenteBlock,titleVal;
+    longVal = $that.attr('data-long');
+    latVal = $that.attr('data-lidt');
+    zoomVal = $that.attr('data-zoom')*1;
+    titleVal = $that.attr('data-title');
+
+    var myLatlng = new google.maps.LatLng(longVal,latVal);
+    var mapOptions = {
+      zoom: zoomVal,
+      center: myLatlng
+    };
+    mapAddress.setOptions(mapOptions);
+    markerAddress.setOptions({
+      position: myLatlng,
+      map: mapAddress,
+      title: titleVal
+    });
+  });
+
+  $('.js-faq-collapse').on('show.bs.collapse', function(event) {
+    $(this).parent('.faq-item').addClass('faq-item__open');
+  });
+  $('.js-faq-collapse').on('hide.bs.collapse', function(event) {
+    $(this).parent('.faq-item').removeClass('faq-item__open')
+  });
+
+  $('.js-vacancy-collapse').on('show.bs.collapse', function(event) {
+    $(this).parent('.vacancy-item').addClass('vacancy-item__open');
+  });
+  $('.js-vacancy-collapse').on('hide.bs.collapse', function(event) {
+    $(this).parent('.vacancy-item').removeClass('vacancy-item__open')
+  });
 }); //end document ready
 
 /**
