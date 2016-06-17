@@ -548,9 +548,22 @@ label + .form-control
   color: #ee222a
   text-shadow: none
 
-.reviewModal
-  .rating-container
-    margin-top: 2px
+.rating-conteiner
+  margin: 15px 0
+.rating-block
+  font-size: 20px
+  .rating
+    overflow: hidden
+    >span
+      transition: color .35s
+      cursor: pointer
+      float: left
+    >span:not(:first-child)
+      margin-left: 3px
+  .active
+    color: rgb(238, 34, 42)
+  .empty
+    color: #676768
 /***********************************************
  * panel
  ***********************************************/
@@ -1286,3 +1299,28 @@ label + .form-control
   bottom: 0
   left: 430px
   width: auto
+
+.brands-list
+  text-align: justify
+  list-style: none
+  &:after
+    display: inline-block
+    content: ''
+    width: 100%
+.brands-list__item
+  min-width: 250px
+  display: inline-block
+  vertical-align: middle
+  margin: 10px
+  padding: 15px
+  border: 1px solid #959295
+  border-radius: 3px
+  img
+    display: block
+    max-width: 100%
+    margin: 0 auto
+    filter: grayscale(100%)
+    transition: all 0.3s
+  &:hover
+    img
+      filter: grayscale(0)

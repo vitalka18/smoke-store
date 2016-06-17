@@ -414,6 +414,28 @@ $(document).ready(function() {
   $('.js-vacancy-collapse').on('hide.bs.collapse', function(event) {
     $(this).parent('.vacancy-item').removeClass('vacancy-item__open')
   });
+
+  $('body').on('click','.rating:not(.disabled) > span',function() {
+    $(event.target).closest('.rating').find('span').removeClass('active').addClass('empty');
+    $(event.target).closest('.rating').attr('data-rating', $(this).index() + 1);
+    for( i = 0; i <= $(this).index(); i++) {
+      $(event.target).closest('.rating').find('span').eq(i).addClass('active').removeClass('empty');
+    }
+  });
+
+  $('body').on('mouseover','.rating:not(.disabled) > span', function(event) {
+    $(event.target).closest('.rating').find('span').removeClass('active').addClass('empty');
+    for( i = 0; i <= $(this).index(); i++) {
+      $(event.target).closest('.rating').find('span').eq(i).addClass('active').removeClass('empty');
+    }
+  });
+
+  $('body').on('mouseleave','.rating:not(.disabled)', function() {
+    $(this).find(' > span').removeClass('active').addClass('empty');
+    for( i = 0; i <= Math.round($(this).attr('data-rating')) - 1; i++) {
+      $(this).find('> span').eq(i).addClass('active').removeClass('empty');
+    }
+  });
 }); //end document ready
 
 /**

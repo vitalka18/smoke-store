@@ -599,7 +599,14 @@ label + .form-control { margin-top: 4px; }
 
 .rating-container .filled-stars { color: #ee222a; text-shadow: none; }
 
-.reviewModal .rating-container { margin-top: 2px; }
+.rating-conteiner { margin: 15px 0; }
+
+.rating-block { font-size: 20px; }
+.rating-block .rating { overflow: hidden; }
+.rating-block .rating > span { -webkit-transition: color 0.35s; transition: color 0.35s; cursor: pointer; float: left; }
+.rating-block .rating > span:not(:first-child) { margin-left: 3px; }
+.rating-block .active { color: #ee222a; }
+.rating-block .empty { color: #676768; }
 
 /*********************************************** panel ********************************************* */
 .contact-panel { border: 1px solid #a2a2a2; margin-bottom: 145px; -webkit-border-radius: 3px; border-radius: 3px; }
@@ -850,9 +857,14 @@ label + .form-control { margin-top: 4px; }
 
 .store-address__map { position: absolute; right: 0; top: 0; bottom: 0; left: 430px; width: auto; }
 
+.brands-list { text-align: justify; list-style: none; }
+.brands-list:after { display: inline-block; content: ""; width: 100%; }
+
+.brands-list__item { min-width: 250px; display: inline-block; vertical-align: middle; margin: 10px; padding: 15px; border: 1px solid #959295; -webkit-border-radius: 3px; border-radius: 3px; }
+.brands-list__item img { display: block; max-width: 100%; margin: 0 auto; -webkit-filter: grayscale(100%); filter: grayscale(100%); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.brands-list__item:hover img { -webkit-filter: grayscale(0); filter: grayscale(0); }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-
 @media screen and (max-width: 992px){
  .header__bottom-center{ padding-left: 0; text-align: center; }
  .nav-main{ width: 100%; }
@@ -876,10 +888,8 @@ label + .form-control { margin-top: 4px; }
  .store-address__list{ width: 100%; float: none; }
  .store-address__map{ position: static; height: 500px; }
  .address-block.address-block_active:after{ display: none; } }
-
 @media screen and (min-width: 768px){
  .modal-sm{ width: 360px; } }
-
 @media screen and (max-width: 767px){
  .store-address__map{ position: static; height: 300px; }
  .btn-block-xs{ display: block; width: 100%; }
@@ -985,8 +995,8 @@ label + .form-control { margin-top: 4px; }
  .action-right{ float: none; margin-top: 30px; display: block; text-align: center; }
  .share__title{ display: block; font-size: 18px; margin-bottom: 10px; }
  .tag{ text-align: center; }
- .tag .icon-tag{ display: block; margin: 0 auto; } }
-
+ .tag .icon-tag{ display: block; margin: 0 auto; }
+ .brands-list{ text-align: center; } }
 @media screen and (max-width: 440px){
  .step__nav ul li{ margin: 5px; }
  .step__nav ul li a{ width: 55px; height: 55px; line-height: 55px; }
