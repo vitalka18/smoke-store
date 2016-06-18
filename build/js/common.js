@@ -304,6 +304,17 @@ $(document).ready(function() {
       $(this).find('> span').eq(i).addClass('active').removeClass('empty');
     }
   });
+
+  var $menu = $("#mainMenu"),
+  $fixedMenu = $(".fixed-menu"),
+      topPosition = $menu.offset().top * 1.5;
+  $(window).scroll(function(){
+    if ( $(this).scrollTop() > topPosition ){
+      $fixedMenu.addClass('active');
+    } else if($(this).scrollTop() <=topPosition ) {
+        $fixedMenu.removeClass("active");
+    }
+  });//scroll
 }); //end document ready
 
 /**

@@ -77,7 +77,7 @@
   border-top: 1px solid $dark-base
   border-bottom: 1px solid $dark-base
 
-#mainMenu
+#mainMenu, #mainMenuFixed
   position: relative
 
 .menu-xs
@@ -245,3 +245,62 @@
     &.active
       a 
         color: #a90525
+.fixed-menu
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background: #cdcdcd
+  border-bottom: 1px solid #000
+  visibility: hidden
+  opacity: 0
+  z-index: -100
+  transition: all .3s
+  &.active
+    visibility: visible
+    opacity: 1
+    z-index: 999
+  .nav-main
+    width: 620px
+.fixed-icon-nav
+  +clr
+  list-style: none
+  padding: 0
+  margin: 2px 0 2px 20px 
+.fixed-menu__tel
+  padding: 9px 0
+  font-size: 16px
+  font-weight: 600
+  color: #000
+
+.fixed-icon-nav__item
+  float: right
+  position: relative
+  &:not(:first-child)
+    margin-right: 6px
+  .badge
+    padding: 3px
+    position: absolute
+    font-size: 8px
+    background: #cc0000
+    color: #fff
+    border-radius: 3px
+.fixed-icon-nav__link
+  transition: opacity .3s
+  span
+    vertical-align: middle
+  &:hover
+    opacity: .7
+
+.icon-fixed-cart
+  &:hover
+    background-position: 0px -41px
+  + .badge
+    right: -3px
+    bottom: 0px
+.icon-fixed-search
+  &:hover
+    background-position: 0px -82px
+.icon-fixed-people
+  &:hover
+    background-position: -87px 0px
