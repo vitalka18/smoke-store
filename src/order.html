@@ -27,34 +27,52 @@
               <div class="row form-horizontal">
                 <div class="col-md-5">
                   <div class="form-group">
-                    <label for="telInputName" class="control-label col-md-4 col-sm-4">Имя <span class="text-danger">*</span></label>
-                    <div class="col-md-8 col-sm-8"><input type="text" class="form-control" id="telInputName"></div>
+                    <label for="nameInput" class="control-label col-md-4 col-sm-4">Имя <span class="text-danger">*</span></label>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="nameInput" type="text" class="form-control" id="telInputName" data-error-msg="Это поле обязательно для заполнения">
+                    </div>
+                  
                   </div>
 
                   <div class="form-group">
                     <label for="telInput2" class="control-label col-md-4 col-sm-4">Телефон <span class="text-danger">*</span></label>
-                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="telInput2"></div>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="telInput" type="tel" class="form-control" data-error-msg="Это поле обязательно для заполнения">
+                    </div>
+                  
                   </div>
 
                   <div class="form-group">
                     <label for="emailInput" class="control-label col-md-4 col-sm-4">Email <span class="text-danger">*</span></label>
-                     <div class="col-md-8 col-sm-8"><input type="email" class="form-control" id="emailInput"></div>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="emailInput" type="email" class="form-control" data-error-msg="Введите корректный email-адрес">
+                    </div>
+                  
                   </div>
                 </div>
                 <div class="col-md-5 col-md-offset-2">
                   <div class="form-group">
-                    <label for="region" class="control-label col-md-4 col-sm-4">Регион <span class="text-danger">*</span></label>
-                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="region"></div>
+                    <label for="regionInput" class="control-label col-md-4 col-sm-4">Регион <span class="text-danger">*</span></label>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="regionInput" type="text"  class="form-control" data-error-msg="Это поле обязательно для заполнения">
+                    </div>
+                  
                   </div>
 
                   <div class="form-group">
-                    <label for="city" class="control-label col-md-4 col-sm-4">Город <span class="text-danger">*</span></label>
-                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="city"></div>
+                    <label for="cityInput" class="control-label col-md-4 col-sm-4">Город <span class="text-danger">*</span></label>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="cityInput" type="text" class="form-control" data-error-msg="Это поле обязательно для заполнения">
+                    </div>
+                  
                   </div>
 
                   <div class="form-group">
-                    <label for="address" class="control-label col-md-4 col-sm-4">Адрес <span class="text-danger">*</span></label>
-                     <div class="col-md-8 col-sm-8"><input type="tel" class="form-control" id="address"></div>
+                    <label for="addressInput" class="control-label col-md-4 col-sm-4">Адрес <span class="text-danger">*</span></label>
+                    <div class="col-md-8 col-sm-8">
+                      <input id="addressInput" type="text" class="form-control" data-error-msg="Это поле обязательно для заполнения">
+                    </div>
+                  
                   </div>
                 </div>
               </div>
@@ -68,7 +86,7 @@
 
                 <div class="to-right">
                   <a class="btn btn-lg btn-reset btn-prev">Вернуться</a>
-                  <a class="btn btn-lg btn-buy btn-next">Далее</a>
+                  <a class="btn btn-lg btn-buy btn-next disabled">Далее</a>
                 </div>
               </div>
             </div>
@@ -77,21 +95,21 @@
           <div class="tab-pane" id="tab2">
             <div class="step__body">
               <h4 class="step-title">Шаг 2: Выбор способа доставки</h4>
-              <div class="radio-group">
+              <div class="radio-group" data-error-msg="Выберите способ доставки">
                 <div class="radio"><label>
-                  <input type="radio"> Самовывоз (бесплатно)
+                  <input name="deliverySet" type="radio"> Самовывоз (бесплатно)
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Курьерская доставка по Москве (бесплатно)
+                  <input name="deliverySet" type="radio"> Курьерская доставка по Москве (бесплатно)
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Курьерская доставка по МО (бесплатно)
+                  <input name="deliverySet" type="radio"> Курьерская доставка по МО (бесплатно)
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Почта России (В любую точку РФ) (300 руб)
+                  <input name="deliverySet" type="radio"> Почта России (В любую точку РФ) (300 руб)
                 </label></div>
               </div>
               <div class="form-action clearfix">
@@ -105,21 +123,21 @@
           <div class="tab-pane" id="tab3">
             <div class="step__body">
               <h4 class="step-title">Шаг 3: Выбор способа оплаты</h4>
-              <div class="radio-group">
+              <div class="radio-group" data-error-msg="Выберите способ оплаты">
                 <div class="radio"><label>
-                  <input type="radio">      Наличными в магазине
+                  <input name="paySet" type="radio">      Наличными в магазине
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Наличными курьеру
+                  <input name="paySet" type="radio"> Наличными курьеру
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Банковской картой
+                  <input name="paySet" type="radio"> Банковской картой
                 </label></div>
 
                 <div class="radio"><label>
-                  <input type="radio"> Robokassa
+                  <input name="paySet" type="radio"> Robokassa
                 </label></div>  
               </div> 
              

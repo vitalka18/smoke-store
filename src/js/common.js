@@ -1,12 +1,18 @@
 var $mapAddress, mapAddress, markerAddress;
 
 $(document).ready(function() {
+  /**
+   * вирівнювання блоків по висоті
+   */
   setEqualHeight( $('.goods-item .goods-slide__title') );
   setEqualHeight( $('.goods-container__new .goods-slide__title') );
   setEqualHeight( $('.goods-slider-container_popular .goods-slide__title') );
   setEqualHeight( $('.blog-wrap .blog-item__title') );
   setEqualHeight( $('.blog-wrap .blog-item') );
-
+  
+  /**
+   * вирфвнювання блоків по висоті при зміні ширини вікна
+   */
   $(window).resize(function() {
     $('.goods-item .goods-slide__title').css('height', 'auto');
     $('.goods-container__new .goods-slide__title').css('height', 'auto');
@@ -19,7 +25,10 @@ $(document).ready(function() {
     setEqualHeight( $('.blog-wrap .blog-item__title') );
     setEqualHeight( $('.blog-wrap .blog-item') );
   });
-
+  
+  /**
+   * ініціалізація слайдера на головній сторінці
+   */
 	$('.js-main-slider').slick({
     dots: true,
     infinite: true,
@@ -38,6 +47,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація слайдера брендів сторінці
+   */
   $('.js-brand-slider').slick({
     dots: false,
     infinite: true,
@@ -74,6 +86,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація слайдеру товарів
+   */
   $('.js-goods-slider').slick({
     dots: false,
     infinite: true,
@@ -104,6 +119,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація шалереї в карточці товару
+   */
   $('.js-good-gallery').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -111,7 +129,9 @@ $(document).ready(function() {
     fade: true,
     asNavFor: '.js-good-gallery-nav'
   });
-
+  /**
+   * ініціалізація слейдера превю в карточці товару
+   */
   $('.js-good-gallery-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -122,7 +142,9 @@ $(document).ready(function() {
   });
   
 
-  
+  /**
+   * ховер на головному меню другого рівня
+   */
   $('.sub-menu a').hover(function() {
     var $that = $(this);
     var $preview = $that.find('.sub-menu__preview');
@@ -133,6 +155,9 @@ $(document).ready(function() {
     $preview.css('background-image', $preview.attr('data-bg'));
   });
 
+  /** 
+   * колапс меню другого рівня на малих екранах
+   */
   $('.js-open-menu').on('click', function(e){
     e.preventDefault();
 
@@ -147,6 +172,10 @@ $(document).ready(function() {
       $that.removeClass('open');
     }
   });
+
+  /**
+   * ініціалізація слайдера вартості товару
+   */
   if ( $('.js-range').length ) {
     $('.js-range').slider({
     }).on('slide', function(value) {
@@ -159,6 +188,9 @@ $(document).ready(function() {
     });
   }
   
+  /**
+   * рейтинг
+   */
  $('.rating-goods').rating({
     min: 0,
     max: 5,
@@ -183,6 +215,22 @@ $(document).ready(function() {
     verticalbuttons: true
   });
 
+  $('#orderForm').find('.tab-pane').eq(0).find('input').on('change keyup', function() {
+    if (orderFormOne('tab', 'navigation', 0)) {
+      $('#orderForm').find('.tab-pane').eq(0).find('.btn-next').removeClass('disabled');
+    }
+  });
+
+  $('[name="deliverySet"]').on('change', function() {
+    $('[name="deliverySet"]').first().closest('.radio-group').find('.text-error').remove();
+    $('#orderForm').find('.tab-pane').eq(1).find('.btn-next').removeClass('disabled');
+  });
+
+  $('[name="paySet"]').on('change', function() {
+    $('[name="paySet"]').first().closest('.radio-group').find('.text-error').remove();
+    $('#orderForm').find('.tab-pane').eq(2).find('.btn-next').removeClass('disabled');
+  });
+
   $('#orderForm .step-form__inner').bootstrapWizard({
     'nextSelector': '.btn-next', 
     'previousSelector': '.btn-prev', 
@@ -190,9 +238,114 @@ $(document).ready(function() {
     onFinish: function() {
       $('#orderThank').css('display', 'block');
       $('#orderForm').css('display', 'none');
+    },
+    onTabClick: function() {
+      return false;
+    },
+    onNext: function(tab, navigation, index) {
+      if (index === 1) {
+        if (!orderFormOne(tab, navigation, index)) {
+          return false;
+        }
+      }
+
+      if (index === 2) {
+        if ( $('[name="deliverySet"]:checked').length ) {
+          $('[name="deliverySet"]').first().closest('.radio-group').find('.text-error').remove();
+          return true
+        } else {
+          $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+          var textError = $('[name="deliverySet"]').first().closest('.radio-group').attr('data-error-msg');
+          $('[name="deliverySet"]').first().closest('.radio-group').append('<p class="text-error">'+ textError +'</p>');
+          return false;
+        }
+      }
+
+      if (index === 3) {
+        if ( $('[name="paySet"]:checked').length ) {
+          $('[name="paySet"]').first().closest('.radio-group').find('.text-error').remove();
+          return true
+        } else {
+          $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+          var textError = $('[name="paySet"]').first().closest('.radio-group').attr('data-error-msg');
+          $('[name="paySet"]').first().closest('.radio-group').append('<p class="text-error">'+ textError +'</p>');
+          return false;
+        }
+      }
+    }
+  });
+
+  function orderFormOne(tab, navigation, index) {
+    var $nameInput = $('#nameInput'),
+        $telInput = $('#telInput'),
+        $emailInput = $('#emailInput'),
+        $regionInput = $('#regionInput'),
+        $cityInput = $('#cityInput'),
+        $addressInput = $('#addressInput');
+
+    var isNameValid = !$nameInput.val().length,
+        isTelValid = !$telInput.val().length,
+        isEmailValid = !$emailInput.val().length,
+        isRegionValid = !$regionInput.val().length,
+        isCityValid = !$cityInput.val().length,
+        isAddressValid = !$addressInput.val().length;
+    if (isNameValid) {
+      showError($nameInput, index);
+    } else {
+      hideError($nameInput, index);
     }
 
-  });
+    if (isTelValid) {
+      showError($telInput, index);
+    } else {
+      hideError($telInput, index);
+    }
+
+    if (!isEmailValid && /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test($emailInput.val())) {
+      hideError($emailInput, index);
+    } else {
+      showError($emailInput, index);
+    }
+
+    if (isRegionValid) {
+      showError($regionInput, index);
+    } else {
+      hideError($regionInput, index);
+    }
+
+    if (isCityValid) {
+      showError($cityInput, index);
+    } else {
+      hideError($cityInput, index);
+    }
+
+    if (isAddressValid) {
+      showError($addressInput, index);
+    } else {
+      hideError($addressInput, index);
+    }
+
+    if (isNameValid || isTelValid || isEmailValid || isRegionValid || isCityValid || isAddressValid) {
+      return false;
+    } else {
+      return true;
+    }
+
+    function showError(fieldSelector, index) {
+      var textError = fieldSelector.attr('data-error-msg');
+      fieldSelector.closest('.form-group').addClass('has-error');
+      if ( fieldSelector.parent().find('p.text-error').length ===0 ) {
+        fieldSelector.parent().append('<p class="text-error">'+ textError +'</p>');
+      }
+      $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+    }
+
+    function hideError(fieldSelector, index) {
+      fieldSelector.closest('.form-group').removeClass('has-error');
+      fieldSelector.parent().find('p.text-error').remove();
+    }
+  }
+
   if ( $('.mapFrame').length ) {
     var $map = $('#map-canvas');
     var longVal,latVal,zoomVal,contenteBlock,titleVal;

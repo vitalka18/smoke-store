@@ -183,6 +183,22 @@ $(document).ready(function() {
     verticalbuttons: true
   });
 
+  $('#orderForm').find('.tab-pane').eq(0).find('input').on('change keyup', function() {
+    if (orderFormOne('tab', 'navigation', 0)) {
+      $('#orderForm').find('.tab-pane').eq(0).find('.btn-next').removeClass('disabled');
+    }
+  });
+
+  $('[name="deliverySet"]').on('change', function() {
+    $('[name="deliverySet"]').first().closest('.radio-group').find('.text-error').remove();
+    $('#orderForm').find('.tab-pane').eq(1).find('.btn-next').removeClass('disabled');
+  });
+
+  $('[name="paySet"]').on('change', function() {
+    $('[name="paySet"]').first().closest('.radio-group').find('.text-error').remove();
+    $('#orderForm').find('.tab-pane').eq(2).find('.btn-next').removeClass('disabled');
+  });
+
   $('#orderForm .step-form__inner').bootstrapWizard({
     'nextSelector': '.btn-next', 
     'previousSelector': '.btn-prev', 
@@ -190,9 +206,114 @@ $(document).ready(function() {
     onFinish: function() {
       $('#orderThank').css('display', 'block');
       $('#orderForm').css('display', 'none');
+    },
+    onTabClick: function() {
+      return false;
+    },
+    onNext: function(tab, navigation, index) {
+      if (index === 1) {
+        if (!orderFormOne(tab, navigation, index)) {
+          return false;
+        }
+      }
+
+      if (index === 2) {
+        if ( $('[name="deliverySet"]:checked').length ) {
+          $('[name="deliverySet"]').first().closest('.radio-group').find('.text-error').remove();
+          return true
+        } else {
+          $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+          var textError = $('[name="deliverySet"]').first().closest('.radio-group').attr('data-error-msg');
+          $('[name="deliverySet"]').first().closest('.radio-group').append('<p class="text-error">'+ textError +'</p>');
+          return false;
+        }
+      }
+
+      if (index === 3) {
+        if ( $('[name="paySet"]:checked').length ) {
+          $('[name="paySet"]').first().closest('.radio-group').find('.text-error').remove();
+          return true
+        } else {
+          $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+          var textError = $('[name="paySet"]').first().closest('.radio-group').attr('data-error-msg');
+          $('[name="paySet"]').first().closest('.radio-group').append('<p class="text-error">'+ textError +'</p>');
+          return false;
+        }
+      }
+    }
+  });
+
+  function orderFormOne(tab, navigation, index) {
+    var $nameInput = $('#nameInput'),
+        $telInput = $('#telInput'),
+        $emailInput = $('#emailInput'),
+        $regionInput = $('#regionInput'),
+        $cityInput = $('#cityInput'),
+        $addressInput = $('#addressInput');
+
+    var isNameValid = !$nameInput.val().length,
+        isTelValid = !$telInput.val().length,
+        isEmailValid = !$emailInput.val().length,
+        isRegionValid = !$regionInput.val().length,
+        isCityValid = !$cityInput.val().length,
+        isAddressValid = !$addressInput.val().length;
+    if (isNameValid) {
+      showError($nameInput, index);
+    } else {
+      hideError($nameInput, index);
     }
 
-  });
+    if (isTelValid) {
+      showError($telInput, index);
+    } else {
+      hideError($telInput, index);
+    }
+
+    if (!isEmailValid && /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test($emailInput.val())) {
+      hideError($emailInput, index);
+    } else {
+      showError($emailInput, index);
+    }
+
+    if (isRegionValid) {
+      showError($regionInput, index);
+    } else {
+      hideError($regionInput, index);
+    }
+
+    if (isCityValid) {
+      showError($cityInput, index);
+    } else {
+      hideError($cityInput, index);
+    }
+
+    if (isAddressValid) {
+      showError($addressInput, index);
+    } else {
+      hideError($addressInput, index);
+    }
+
+    if (isNameValid || isTelValid || isEmailValid || isRegionValid || isCityValid || isAddressValid) {
+      return false;
+    } else {
+      return true;
+    }
+
+    function showError(fieldSelector, index) {
+      var textError = fieldSelector.attr('data-error-msg');
+      fieldSelector.closest('.form-group').addClass('has-error');
+      if ( fieldSelector.parent().find('p.text-error').length ===0 ) {
+        fieldSelector.parent().append('<p class="text-error">'+ textError +'</p>');
+      }
+      $('#orderForm').find('.tab-pane').eq(index - 1).find('.btn-next').addClass('disabled');
+    }
+
+    function hideError(fieldSelector, index) {
+      fieldSelector.closest('.form-group').removeClass('has-error');
+      fieldSelector.parent().find('p.text-error').remove();
+    }
+  }
+
   if ( $('.mapFrame').length ) {
     var $map = $('#map-canvas');
     var longVal,latVal,zoomVal,contenteBlock,titleVal;

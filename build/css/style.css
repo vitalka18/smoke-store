@@ -419,6 +419,14 @@ p { margin-bottom: 15px; }
 
 .text-danger { color: #da2028; }
 
+.has-error .control-label, .has-error label { color: #000; }
+
+.has-error .form-control { border-color: #da2028; }
+
+.has-error .form-control:focus { border-color: #da2028; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(218, 32, 40, 0.8); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(218, 32, 40, 0.8); }
+
+.text-error { font-size: 12px; color: #da2028; margin-bottom: 0; }
+
 .text-success { color: #038625; }
 
 .goods-page-title { margin: 45px 0 15px; font-size: 24px; color: #1e3443; }
