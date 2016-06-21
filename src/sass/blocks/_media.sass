@@ -101,11 +101,28 @@
     &:hover
       .nav-main__sub-menu
         display: none
-  
+      &:hover,
+      &:focus,
+      &:active
+        background: none
   .nav-main__sub-menu
     position: static
     padding: 10px 15px    
-
+  .nav-main__sub-menu_half
+    .sub-menu
+      li
+        width: auto
+        &:nth-of-type(2n)
+          border-right: none
+    .sub-menu__preview
+      height: 50px
+      width: 40px
+    .sub-menu__text
+      margin-left: 50px
+    .sub-menu__title
+      margin-left: 50px
+      padding-left: 0px
+      padding-top: 0px
   .sub-menu
     li
       padding-top: 15px

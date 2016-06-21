@@ -8,8 +8,7 @@ $(document).ready(function() {
   setEqualHeight( $('.goods-container__new .goods-slide__title') );
   setEqualHeight( $('.goods-slider-container_popular .goods-slide__title') );
   setEqualHeight( $('.blog-wrap .blog-item__title') );
-  setEqualHeight( $('.blog-wrap .blog-item') );
-  
+  setEqualHeight( $('.blog-wrap .blog-item') );  
   /**
    * вирфвнювання блоків по висоті при зміні ширини вікна
    */
@@ -468,6 +467,18 @@ $(document).ready(function() {
         $fixedMenu.removeClass("active");
     }
   });//scroll
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 60) {
+      $('#to-up').fadeIn(400);
+    } else {
+      $('#to-up').fadeOut(400);
+    }
+  });
+  $('#to-up').click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0}, 800);
+  });
 }); //end document ready
 
 /**

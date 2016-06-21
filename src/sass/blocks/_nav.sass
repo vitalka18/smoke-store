@@ -105,11 +105,20 @@
 .nav-main__item
   display: table-cell
   border-right: 1px solid $dark-base
+  vertical-align: middle
   &:hover
     .nav-main__sub-menu
       display: block
-
+  &:hover,
+  &:focus,
+  &:active
+    text-decoration: none
+    color: #fff
+    background: #da2028
+    a
+      color: #fff
 .nav-main__link
+  height: 100%
   position: relative
   display: block
   padding: 11px 20px
@@ -140,7 +149,7 @@
         border-left: 10px solid transparent
         border-right: 10px solid transparent
         border-top: 10px solid #da2028
-        z-index: 101
+        z-index: 155
         width: 10px
 .nav-main__sub-menu
   display: none
@@ -153,8 +162,22 @@
   background: rgba(49, 46, 49, .88)
   border: 1px solid #cdbdbd
   border-top: none
-  z-index: 100  
-
+  z-index: 120  
+.nav-main__sub-menu_half
+  .sub-menu
+    li
+      width: 49%
+      &:nth-of-type(2n)
+        border-right: none
+  .sub-menu__preview
+    height: 140px
+    width: 60px
+  .sub-menu__text
+    margin-left: 80px
+  .sub-menu__title
+    margin-left: 80px
+    padding-left: 0px
+    padding-top: 40px
 .sub-menu
   text-align: left
   li
@@ -185,6 +208,7 @@
   background-position: center top
   background-repeat: no-repeat
   background-image: url('attr(data-bg)')
+  background-size: contain
 .sub-menu__text
   margin-left: 50px
   font-size: 12px

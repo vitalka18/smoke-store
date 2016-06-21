@@ -133,12 +133,17 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 var $mapAddress, mapAddress, markerAddress;
 
 $(document).ready(function() {
+  /**
+   * вирівнювання блоків по висоті
+   */
   setEqualHeight( $('.goods-item .goods-slide__title') );
   setEqualHeight( $('.goods-container__new .goods-slide__title') );
   setEqualHeight( $('.goods-slider-container_popular .goods-slide__title') );
   setEqualHeight( $('.blog-wrap .blog-item__title') );
-  setEqualHeight( $('.blog-wrap .blog-item') );
-
+  setEqualHeight( $('.blog-wrap .blog-item') );  
+  /**
+   * вирфвнювання блоків по висоті при зміні ширини вікна
+   */
   $(window).resize(function() {
     $('.goods-item .goods-slide__title').css('height', 'auto');
     $('.goods-container__new .goods-slide__title').css('height', 'auto');
@@ -151,7 +156,10 @@ $(document).ready(function() {
     setEqualHeight( $('.blog-wrap .blog-item__title') );
     setEqualHeight( $('.blog-wrap .blog-item') );
   });
-
+  
+  /**
+   * ініціалізація слайдера на головній сторінці
+   */
 	$('.js-main-slider').slick({
     dots: true,
     infinite: true,
@@ -170,6 +178,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація слайдера брендів сторінці
+   */
   $('.js-brand-slider').slick({
     dots: false,
     infinite: true,
@@ -206,6 +217,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація слайдеру товарів
+   */
   $('.js-goods-slider').slick({
     dots: false,
     infinite: true,
@@ -236,6 +250,9 @@ $(document).ready(function() {
     ]
   });
 
+  /**
+   * ініціалізація шалереї в карточці товару
+   */
   $('.js-good-gallery').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -243,7 +260,9 @@ $(document).ready(function() {
     fade: true,
     asNavFor: '.js-good-gallery-nav'
   });
-
+  /**
+   * ініціалізація слейдера превю в карточці товару
+   */
   $('.js-good-gallery-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -254,7 +273,9 @@ $(document).ready(function() {
   });
   
 
-  
+  /**
+   * ховер на головному меню другого рівня
+   */
   $('.sub-menu a').hover(function() {
     var $that = $(this);
     var $preview = $that.find('.sub-menu__preview');
@@ -265,6 +286,9 @@ $(document).ready(function() {
     $preview.css('background-image', $preview.attr('data-bg'));
   });
 
+  /** 
+   * колапс меню другого рівня на малих екранах
+   */
   $('.js-open-menu').on('click', function(e){
     e.preventDefault();
 
@@ -279,6 +303,10 @@ $(document).ready(function() {
       $that.removeClass('open');
     }
   });
+
+  /**
+   * ініціалізація слайдера вартості товару
+   */
   if ( $('.js-range').length ) {
     $('.js-range').slider({
     }).on('slide', function(value) {
@@ -291,6 +319,9 @@ $(document).ready(function() {
     });
   }
   
+  /**
+   * рейтинг
+   */
  $('.rating-goods').rating({
     min: 0,
     max: 5,
@@ -568,6 +599,18 @@ $(document).ready(function() {
         $fixedMenu.removeClass("active");
     }
   });//scroll
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 60) {
+      $('#to-up').fadeIn(400);
+    } else {
+      $('#to-up').fadeOut(400);
+    }
+  });
+  $('#to-up').click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0}, 800);
+  });
 }); //end document ready
 
 /**

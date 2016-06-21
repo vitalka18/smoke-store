@@ -752,6 +752,13 @@ label + .form-control
     padding-bottom: 5px
     vertical-align: middle
 
+.table-history_modal
+  .name
+    width: 280px
+    text-align: left
+    vertical-align: middle
+    img
+      margin-right: 15px
 .table-order-modal__price
   text-align: right
 .table-order-modal__count
@@ -1346,3 +1353,15 @@ label + .form-control
   .navbar-form-search
     width: 100%
     margin: 0
+#to-up
+  width: 57px
+  height: 57px
+  background: url(../img/to-up.png) center no-repeat
+  position: fixed
+  right: 20px
+  bottom: 50px
+  z-index: 111
+  display: none
+  transition: opacity .3s
+  &:hover
+    opacity: .7
