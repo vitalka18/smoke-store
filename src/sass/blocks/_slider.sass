@@ -44,21 +44,41 @@
       filter: grayscale(0%)
 .main-slider-container
   padding: 0
-  background: url(../img/main-slider-mask-2.png) center top no-repeat
+  position: relative
 
 .main-slider
-  background: url(../img/main-slider-mask-1.png) center bottom no-repeat
   background-size: 100% auto
-  padding-bottom: 80px
+  padding-bottom: 0px
   .slick-dots
     bottom: 35px
 
 .main-slider__slide
-  padding-top: 65px
+  padding-top: 0px
   text-align: center
   position: relative
-  img
+  overflow: hidden
+  height: 328px
+  .background-img
     margin: 0 auto
+    display: inline-block
+    text-align: center
+    max-width: inherit
+    float: none
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.main-slider__content
+  position: relative
+
+.js-main-slider__container
+  position: absolute
+  height: 20px
+  top: 50%
+  left: 50%
+  z-index: 50
+  transform: translate(-50%, -50%)
 
 .main-slider__jumbotron
   position: absolute
@@ -70,11 +90,39 @@
   border-radius: 3px
   text-align: center
   z-index: 10
+  &.main-slider__jumbotron_style_three
+    text-align: left
+    background: none
+    font-family: 'Open Sans', sans-serif
+  &.main-slider__jumbotron_style_second
+    background: none
+    text-align: left
+    font-family: 'Open Sans', sans-serif
+    p
+      background: $slider-jumbotron-bg
+      padding: 20px 15px
+      border-radius: 3px
   .jumbotron-img
     margin-bottom: 20px
   p
     font-size: 16px
     margin-bottom: 20px
+
+.main-slider__jumbotron_style_three
+  p
+    font-size: 27px
+    margin-bottom: 25px
+    b
+      font-size: 32px
+.main-slider__jumbotron_style_second
+  padding-top: 0
+  p
+    margin-bottom: 10px
+    font-size: 18px
+    b
+      font-size: 24px
+    b.brand-b
+      font-size: 30px
 
 .slick-prev:before, .slick-next:before
   display: none

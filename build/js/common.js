@@ -36,6 +36,7 @@ $(document).ready(function() {
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    appendArrows: $(".js-main-slider__container"),
     responsive: [
       {
         breakpoint: 480,
