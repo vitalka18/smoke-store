@@ -281,7 +281,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .main-slider__slide { padding-top: 0px; text-align: center; position: relative; overflow: hidden; height: 328px; }
 .main-slider__slide .background-img { margin: 0 auto; display: inline-block; text-align: center; max-width: inherit; float: none; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-.main-slider__content { position: relative; }
+.main-slider__content { position: relative; height: 100%; }
 
 .js-main-slider__container { position: absolute; height: 20px; top: 50%; left: 50%; z-index: 50; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
@@ -292,6 +292,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .main-slider__jumbotron .jumbotron-img { margin-bottom: 20px; }
 .main-slider__jumbotron p { font-size: 16px; margin-bottom: 20px; }
 
+.main-slider__jumbotron_style_three { position: static; margin: 5px 0 0 30px; }
+.main-slider__jumbotron_style_three .jumbotron-img { position: absolute; left: 20px; bottom: 20px; }
 .main-slider__jumbotron_style_three p { font-size: 27px; margin-bottom: 25px; }
 .main-slider__jumbotron_style_three p b { font-size: 32px; }
 
@@ -435,6 +437,8 @@ body { font-family: Verdana, sans-serif; font-size: 14px; line-height: 1.4; }
 .rating-xs { font-size: 20px; }
 
 label { font-weight: normal; }
+
+.text-page ul, .text-page ol { padding-left: 30px; }
 
 p { margin-bottom: 15px; }
 
